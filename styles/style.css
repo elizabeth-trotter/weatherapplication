@@ -1,0 +1,179 @@
+/* Weather Icons - Conditions */
+@font-face {
+    font-family: artilweathericons;
+    src: url(../assets/fonts/artilweathericons.ttf);
+    ;
+}
+
+.weatherIconFont {
+    font-family: artilweathericons;
+    font-size: 7rem;
+}
+
+.weatherIconFontLarge {
+    font-family: artilweathericons;
+    font-size: 12rem;
+}
+
+/* Font Families */
+@font-face {
+    font-family: elmessiri-bold;
+    src: url(../assets/fonts/elmessiri-bold.otf);
+}
+
+@font-face {
+    font-family: elmessiri-regular;
+    src: url(../assets/fonts/elmessiri-regular.otf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../assets/fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Thin;
+    src: url(../assets/fonts/Roboto-Thin.ttf);
+}
+
+/* All */
+
+body {
+    background: rgb(174, 163, 255);
+    background: linear-gradient(90deg, rgba(174, 163, 255, 1) 36%, rgba(103, 113, 255, 1) 56%);
+}
+
+/* Navbar */
+.bgWhite {
+    background-color: #FFFFFF;
+}
+
+.navTitle {
+    color: #707070;
+    font-family: elmessiri-bold;
+    font-size: 2.2rem;
+}
+
+.searchBox {
+    width: 320px;
+    height: 48px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 5px #F1F1F1;
+}
+
+.searchBtn {
+    border-radius: 15px;
+    background-color: #BDB8F8;
+}
+
+/* Body */
+/* Borders */
+.borderRadius {
+    border-radius: 15px;
+}
+
+.borderDotted {
+    border-right: 2px dotted #131313;
+    height: 230px;
+}
+
+.left-dotted-gradient {
+    background-image: linear-gradient(to bottom, #000 40%, rgba(255, 255, 255, 0) 10%);
+    background-position: left;
+    background-size: 2px 8px;
+    background-repeat: repeat-y;
+}
+
+.dotted-gradient {
+    background-image: linear-gradient(to right, #000 30%, rgba(255, 255, 255, 0) 10%);
+    background-position: top;
+    background-size: 8px 2px;
+    background-repeat: repeat-x;
+}
+
+/* Text */
+.RobotoLightFont {
+    font-family: 'Roboto-Light';
+}
+
+.headerText {
+    letter-spacing: 3px;
+    font-size: 28px;
+}
+
+.headerText2 {
+    letter-spacing: 3px;
+    font-size: 23px;
+}
+
+.tempText {
+    font-family: 'elmessiri-regular';
+    font-size: 120px;
+}
+
+.belowCityText {
+    font-family: 'elmessiri-regular';
+    font-size: 25px;
+}
+
+.RobotoRegularFont {
+    font-family: 'Roboto-Regular';
+}
+
+.timesText {
+    font-family: 'Roboto-Thin';
+    font-size: 22px;
+}
+
+.todaysTempsHour {
+    font-family: 'elmessiri-regular';
+    font-size: 55px;
+}
+
+.fiveDayText {
+    font-size: 23px;
+}
+
+.fiveDayTemp {
+    font-size: 21px;
+}
+
+.favoritesBtnS {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.953);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+/* Modal */
+.remove-button {
+    background-color: transparent;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the last parameter (0.9) for transparency */
+}
+
+#favoritesModal {
+    left: 0;     /* Position the modal to the left */
+    right: auto; /* Reset the default right positioning */
+}
+
+.modal-dialog {
+    margin-right: auto; /* Center the modal horizontally */
+    margin-left: 0;     /* Reset the default left margin */
+}
+
+/* Background */
+.bgTransparent {
+    background: rgba(255, 255, 255, 0.33);
+}
