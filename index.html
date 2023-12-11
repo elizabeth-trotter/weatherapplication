@@ -19,13 +19,15 @@
     <!-- Navbar -->
     <nav class="navbar bgWhite">
         <div class="container-fluid ms-5 ps-5 d-flex justify-content-around">
-            
-            <a class="navbar-brand navTitle ps-1 pb-0 "><img src="./assets/logo.png" alt="weather logo" style="height: 60px;"></a>
-            <form class="d-flex me-5 pe-5" role="search">
-                <input id="userSearch" class="form-control me-2 searchBox" type="text" placeholder="Search for a City"
-                    aria-label="Search">
-                <button id="searchBtn" class="btn searchBtn" type="button"><img class="img-fluid" width="25px"
-                        src="./assets/magnify.png" alt="search icon"></button>
+
+            <a class="navbar-brand navTitle ps-1 pb-0 "><img src="./assets/logo.png" alt="weather logo"
+                    style="height: 60px;"></a>
+            <form class="d-flex me-5 pe-5 search-form" role="search">
+                <div class="search-container">
+                    <input id="userSearch" class="form-control me-2 searchBox" type="text"
+                        placeholder="Search for a City" aria-label="Search">
+                    <button id="searchBtn" class="btn searchBtn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
             </form>
         </div>
     </nav>
@@ -41,7 +43,7 @@
                         <h4 id="cityName" class="RobotoLightFont headerText">CITY</h4>
                     </div>
                     <div class="col text-end pe-5">
-                        <div><img id="favoritesAddBtn" src="./assets/heart.png" alt="heart icon" style="height: 27px;">
+                        <div><i id="favoritesAddBtn" class="fa-regular fa-heart" style="font-size: 27px;"></i>
                         </div>
                     </div>
                 </div>
@@ -98,32 +100,32 @@
     <!-- 1st Row End -->
 
     <div class="container mt-3" style="width: 79%;">
-        <div class="row d-flex justify-content-center RobotoLightFont">
-            <div class="col-2 pt-4 pb-3 text-center borderRadius bgTransparent mx-2">
+        <div class="row d-flex justify-content-center RobotoLightFont bgTopTransparent borderRadius">
+            <div class="col-2 pt-4 pb-3 text-center mx-2">
                 <h5 id="dateDayOne" class="fiveDayText"></h5>
                 <p class="weatherIconFont" id="dayOneIcon"></p>
                 <p class="RobotoRegularFont fiveDayTemp"><span id="dayOneHigh">00</span>°F | <span
                         id="dayOneLow">00</span>°F</p>
             </div>
-            <div class="col-2 pt-4 text-center borderRadius bgTransparent me-2">
+            <div class="col-2 pt-4 text-center me-2">
                 <h5 id="dateDayTwo" class="fiveDayText"></h5>
                 <p class="weatherIconFont" id="dayTwoIcon"></p>
                 <p class="RobotoRegularFont fiveDayTemp"><span id="dayTwoHigh">00</span>°F | <span
                         id="dayTwoLow">00</span>°F</p>
             </div>
-            <div class="col-2 pt-4 text-center borderRadius bgTransparent me-2">
+            <div class="col-2 pt-4 text-center me-2">
                 <h5 id="dateDayThree" class="fiveDayText"></h5>
                 <p class="weatherIconFont" id="dayThreeIcon"></p>
                 <p class="RobotoRegularFont fiveDayTemp"><span id="dayThreeHigh">00</span>°F | <span
                         id="dayThreeLow">00</span>°F</p>
             </div>
-            <div class="col-2 pt-4 text-center borderRadius bgTransparent me-2">
+            <div class="col-2 pt-4 text-center me-2">
                 <h5 id="dateDayFour" class="fiveDayText"></h5>
                 <p class="weatherIconFont" id="dayFourIcon"></p>
                 <p class="RobotoRegularFont fiveDayTemp"><span id="dayFourHigh">00</span>°F | <span
                         id="dayFourLow">00</span>°F</p>
             </div>
-            <div class="col-2 pt-4 text-center borderRadius bgTransparent me-2">
+            <div class="col-2 pt-4 text-center me-2">
                 <h5 id="dateDayFive" class="fiveDayText"></h5>
                 <p class="weatherIconFont" id="dayFiveIcon"></p>
                 <p class="RobotoRegularFont fiveDayTemp"><span id="dayFiveHigh">00</span>°F | <span
@@ -135,8 +137,8 @@
 
     <div id="favoritesBtn" class=" container pt-4 d-flex justify-content-center" data-bs-toggle="modal"
         data-bs-target="#favoritesModal">
-        <p class="my-0 text-center d-flex align-items-center favoritesBtnS bgTransparent RobotoRegularFont"><span
-                class="heart-text sp-icon-open"><img src="./assets/like.png" alt="heart icon" style="height: 20px;">
+        <p class="my-0 text-center d-flex align-items-center favoritesBtnS bgTopTransparent RobotoRegularFont"><span
+                class="heart-text sp-icon-open"><i class="fa-solid fa-heart"></i>
                 Open Your
                 Favorite Places</p>
     </div>
@@ -172,6 +174,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/017c4d96b2.js" crossorigin="anonymous"></script>
     <script type="module" src="./scripts/app.js"></script>
 </body>
 

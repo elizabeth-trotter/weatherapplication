@@ -321,9 +321,11 @@ favoritesAddBtn.addEventListener('click', function () {
 
 function updateFavoritesIcon(){
     if (favoritesArray.includes(userSearch.value.toUpperCase() || cityName.textContent)) {
-        favoritesAddBtn.src = "../assets/like.png";
+        favoritesAddBtn.classList.remove("fa-regular");
+        favoritesAddBtn.classList.add("fa-solid");
     } else {
-        favoritesAddBtn.src = "../assets/heart.png";
+        favoritesAddBtn.classList.remove("fa-solid");
+        favoritesAddBtn.classList.add("fa-regular");
     }
     userSearch.value = "";
 }

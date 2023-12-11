@@ -27,11 +27,11 @@ font-family: 'Oswald', sans-serif; */
 } */
 
 body {
-    background-image: url(../assets/day.jpg);
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/day.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    color: #ffffff;
     /* opacity: 0.5; */
     /* background: rgb(174, 163, 255);
     background: linear-gradient(90deg, rgba(174, 163, 255, 1) 36%, rgba(103, 113, 255, 1) 56%); */
@@ -49,17 +49,37 @@ body {
     font-size: 2.2rem;
 }
 
+.search-form {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.search-container {
+    position: relative;
+}
+
 .searchBox {
     width: 320px;
     height: 48px;
     border-radius: 15px;
     font-family: 'Oswald', sans-serif;
-    /* box-shadow: 0px 0px 10px 5px #F1F1F1; */
+    padding-right: 50px; /* Adjust the padding to create space for the button */
 }
 
 .searchBtn {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust the distance from the right */
+    transform: translateY(-50%); /* Center vertically */
     border-radius: 15px;
+    background-color: #FFFFFF;
+    color: black;
+    font-size: 20px;
+}
+
+.searchBtn:hover {
     background-color: #1D2837;
+    color: #FFFFFF; /* Set the desired color when hovering */
 }
 
 /* Body */
@@ -68,7 +88,7 @@ body {
     border-radius: 15px;
 }
 
-.borderDotted {
+/* .borderDotted {
     border-right: 2px dotted #131313;
     height: 230px;
 }
@@ -85,7 +105,7 @@ body {
     background-position: top;
     background-size: 8px 2px;
     background-repeat: repeat-x;
-}
+}*/
 
 /* Text */
 .RobotoLightFont {
@@ -176,8 +196,8 @@ body {
 }
 
 .bgTopTransparent {
-    background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    background-color: rgba(34, 31, 31, 0.127); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
     backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
 }
 
