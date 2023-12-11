@@ -16,46 +16,36 @@
 }
 
 /* Font Families */
-@font-face {
-    font-family: elmessiri-bold;
-    src: url(../assets/fonts/elmessiri-bold.otf);
-}
-
-@font-face {
-    font-family: elmessiri-regular;
-    src: url(../assets/fonts/elmessiri-regular.otf);
-}
-
-@font-face {
-    font-family: Roboto-Regular;
-    src: url(../assets/fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Light;
-    src: url(../assets/fonts/Roboto-Light.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Thin;
-    src: url(../assets/fonts/Roboto-Thin.ttf);
-}
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif; */
 
 /* All */
 
+/* html {
+    max-width: 100%;
+    overflow-x: hidden;
+} */
+
 body {
-    background: rgb(174, 163, 255);
-    background: linear-gradient(90deg, rgba(174, 163, 255, 1) 36%, rgba(103, 113, 255, 1) 56%);
+    background-image: url(../assets/day.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/day.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity: 0.5; */
+    /* background: rgb(174, 163, 255);
+    background: linear-gradient(90deg, rgba(174, 163, 255, 1) 36%, rgba(103, 113, 255, 1) 56%); */
 }
 
 /* Navbar */
 .bgWhite {
-    background-color: #FFFFFF;
+    background-color: #1D2837;
 }
 
 .navTitle {
-    color: #707070;
-    font-family: elmessiri-bold;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 2.2rem;
 }
 
@@ -63,12 +53,13 @@ body {
     width: 320px;
     height: 48px;
     border-radius: 15px;
-    box-shadow: 0px 0px 10px 5px #F1F1F1;
+    font-family: 'Oswald', sans-serif;
+    /* box-shadow: 0px 0px 10px 5px #F1F1F1; */
 }
 
 .searchBtn {
     border-radius: 15px;
-    background-color: #BDB8F8;
+    background-color: #1D2837;
 }
 
 /* Body */
@@ -98,7 +89,8 @@ body {
 
 /* Text */
 .RobotoLightFont {
-    font-family: 'Roboto-Light';
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
 }
 
 .headerText {
@@ -112,26 +104,31 @@ body {
 }
 
 .tempText {
-    font-family: 'elmessiri-regular';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 120px;
 }
 
 .belowCityText {
-    font-family: 'elmessiri-regular';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 25px;
 }
 
 .RobotoRegularFont {
-    font-family: 'Roboto-Regular';
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
 }
 
 .timesText {
-    font-family: 'Roboto-Thin';
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
     font-size: 22px;
 }
 
 .todaysTempsHour {
-    font-family: 'elmessiri-regular';
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     font-size: 55px;
 }
 
@@ -177,3 +174,10 @@ body {
 .bgTransparent {
     background: rgba(255, 255, 255, 0.33);
 }
+
+.bgTopTransparent {
+    background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
+}
+

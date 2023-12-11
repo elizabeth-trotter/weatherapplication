@@ -4,9 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>climate.xchange</title>
+    <title>Weather Pro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
@@ -14,7 +19,8 @@
     <!-- Navbar -->
     <nav class="navbar bgWhite">
         <div class="container-fluid ms-5 ps-5 d-flex justify-content-around">
-            <a class="navbar-brand navTitle ps-1 pb-0 ">climate.xchange</a>
+            
+            <a class="navbar-brand navTitle ps-1 pb-0 "><img src="./assets/logo.png" alt="weather logo" style="height: 60px;"></a>
             <form class="d-flex me-5 pe-5" role="search">
                 <input id="userSearch" class="form-control me-2 searchBox" type="text" placeholder="Search for a City"
                     aria-label="Search">
@@ -29,7 +35,7 @@
         <br>
         <!-- Main -->
         <div class="row d-flex justify-content-center">
-            <div class="col-5 bgWhite borderRadius me-2">
+            <div class="col-5 bgTopTransparent borderRadius me-2">
                 <div class="row ps-4 pt-4">
                     <div class="col">
                         <h4 id="cityName" class="RobotoLightFont headerText">CITY</h4>
@@ -59,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="col-5 bgWhite borderRadius ms-2">
+            <div class="col-5 bgTopTransparent borderRadius ms-2">
                 <div class="row ps-4 pt-4">
                     <div class="col">
                         <h4 class="RobotoLightFont headerText2">TODAY</h4>
@@ -90,7 +96,7 @@
         </div>
     </div>
     <!-- 1st Row End -->
-    
+
     <div class="container mt-3" style="width: 79%;">
         <div class="row d-flex justify-content-center RobotoLightFont">
             <div class="col-2 pt-4 pb-3 text-center borderRadius bgTransparent mx-2">
@@ -140,7 +146,7 @@
     <!-- Footer -->
     <div class="row pt-5">
         <div class="col text-center">
-            <p style="color: white;">handcrafted by Joseph Racca</p>
+            <p style="color: white;">handcrafted by Elizabeth Trotter</p>
         </div>
     </div>
     <!-- Footer End -->
