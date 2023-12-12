@@ -27,7 +27,7 @@ font-family: 'Oswald', sans-serif; */
 } */
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/day.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/daytime.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -38,7 +38,7 @@ body {
 }
 
 /* Navbar */
-.bgWhite {
+.bgBlue {
     background-color: #1D2837;
 }
 
@@ -72,8 +72,8 @@ body {
     right: 10px; /* Adjust the distance from the right */
     transform: translateY(-50%); /* Center vertically */
     border-radius: 15px;
-    background-color: #FFFFFF;
-    color: black;
+    background-color: #EDA169;
+    color: #FFFFFF;
     font-size: 20px;
 }
 
@@ -84,6 +84,18 @@ body {
 
 /* Body */
 /* Borders */
+.bodyTitle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.bodyTitleSmall {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
 .borderRadius {
     border-radius: 15px;
 }
