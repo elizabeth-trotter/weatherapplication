@@ -6,12 +6,10 @@
 }
 
 .weatherIconFont {
-    font-family: artilweathericons;
-    font-size: 7rem;
+    font-size: 2.5rem;
 }
 
 .weatherIconFontLarge {
-    font-family: artilweathericons;
     font-size: 12rem;
 }
 
@@ -49,37 +47,65 @@ body {
     font-size: 2.2rem;
 }
 
-.search-form {
+/* .search-form {
     display: flex;
-    align-items: center; /* Align items vertically in the center */
+    align-items: center; 
 }
+
 
 .search-container {
     position: relative;
 }
 
 .searchBox {
-    width: 320px;
-    height: 48px;
-    border-radius: 15px;
+    width: 100%;
+    max-width: 320px;
+    height: 58px;
+    border-radius: 8px;
     font-family: 'Oswald', sans-serif;
-    padding-right: 50px; /* Adjust the padding to create space for the button */
+    padding-right: 50px; 
 }
 
 .searchBtn {
     position: absolute;
     top: 50%;
-    right: 10px; /* Adjust the distance from the right */
-    transform: translateY(-50%); /* Center vertically */
+    right: 10px; 
+    transform: translateY(-50%); 
     border-radius: 15px;
-    background-color: #EDA169;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
     font-size: 20px;
+} */
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.searchBtn:hover {
-    background-color: #1D2837;
-    color: #FFFFFF; /* Set the desired color when hovering */
+.form-control {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.searchBtnStyle {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+}
+
+.searchBtnStyle:hover {
+    background-color: #EDA169;
+    color: #FFFFFF;
 }
 
 /* Body */
@@ -97,7 +123,7 @@ body {
 }
 
 .borderRadius {
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 /* .borderDotted {

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather Pro</title>
+    <title>Weather Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +17,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar bgBlue">
+    <!-- <nav class="navbar bgBlue">
         <div class="container">
             <a class="navbar-brand navTitle pb-0 "><img src="./assets/logo.png" alt="weather logo"
                     style="height: 60px;"></a>
@@ -30,162 +30,193 @@
                 </div>
             </form>
         </div>
-    </nav>
+    </nav> -->
     <!-- Navbar End -->
-    <div class="container mt-5 pt-5">
-        <div class="row ps-4">
+
+    <!-- Right Favorites Start -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Clear Left -->
             <div class="col">
-                <div class="row">
-                    <h1 class="bodyTitle">Weather Dashboard</h1>
-                </div>
-                <div class="row">
-                    <p class="bodyTitleSmall pt-1">December 11, 2023 | 3:22 PM PST</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Main -->
-    <div class="container">
-        <div class="row mt-5 pt-3 px-4 d-flex justify-content-center">
-            <!-- FAVORITES -->
-            <div class="col-4">
-                <div class="col bgBlue borderRadius" style="height: 100%;">
-                    <div class="row">
-                        <div class="col pt-5 px-5">
-                            <p>Favorites</p>
-                            <hr>
-                            <p class="pt-5">No favorites to show</p>
-                            <p class="pt-5 pb-2">Add a city by clicking the heart icon</p>
-                            <hr>
+                <!-- Title -->
+                <div class="row ms-5">
+                    <div class="col mt-5 pt-3">
+                        <div class="row">
+                            <h1 class="bodyTitle">Weather Report</h1>
+                        </div>
+                        <div class="row">
+                            <p class="bodyTitleSmall pt-3 ps-3">December 11, 2023 | 3:22 PM PST</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- WEATHER UNITS -->
-            <div class="col ms-2">
-                <div class="row">
-                    <!-- CURRENT -->
-                    <div class="col-5 bgTopTransparent borderRadius">
-                        <div class="row ps-4 pt-4">
-                            <div class="col">
-                                <h4 id="cityName" class="RobotoLightFont headerText">CITY</h4>
+
+                <!-- Main -->
+                <div class="row mt-5 pt-3 px-4 d-flex justify-content-center">
+                    <!-- WEATHER UNITS -->
+                    <div class="col ms-2">
+                        <div class="row">
+                            <!-- CURRENT -->
+                            <div class="col-5 bgTopTransparent borderRadius">
+                                <div class="row ps-4 pt-4">
+                                    <div class="col">
+                                        <h4 id="cityName" class="RobotoLightFont headerText">CITY</h4>
+                                    </div>
+                                    <div class="col text-end pe-5">
+                                        <div><i id="favoritesAddBtn" class="fa-regular fa-heart"
+                                                style="font-size: 27px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row ps-4 align-items-center" style="height: 250px;">
+                                    <div class="col-4 text-center">
+                                        <i class="" id="currentWeatherIcon" style="font-size: 6rem;"></i>
+                                    </div>
+                                    <div class="col-7 text-end">
+                                        <h2 class="tempText"><span id="currentTemp">00</span>°F</h2>
+                                    </div>
+                                </div>
+
+                                <div class="row ps-4 belowCityText pt-5 dotted-gradient">
+                                    <div class="col">
+                                        <p id="currentDesc"></p>
+                                    </div>
+                                    <div class="col">
+                                        <p>H: <span id="currentHigh">00</span>°F L: <span id="currentLow">00</span>°F
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col text-end pe-5">
-                                <div><i id="favoritesAddBtn" class="fa-regular fa-heart" style="font-size: 27px;"></i>
+
+                            <!-- TODAY -->
+                            <div class="col bgTopTransparent borderRadius ms-3">
+                                <div class="row ps-4 pt-4">
+                                    <div class="col">
+                                        <h4 class="RobotoLightFont headerText2">TODAY</h4>
+                                    </div>
+                                    <div class="col text-end pe-5">
+                                        <p id="time" class="RobotoLightFont headerText2"></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-4 text-center">
+                                        <p class="timesText">8am</p>
+                                        <i class="weatherIconFont" id="morningIcon"></i>
+                                        <h2 class="todaysTempsHour"><span id="morningTemp">00</span>°</h2>
+                                    </div>
+                                    <div class="col-4 text-center left-dotted-gradient">
+                                        <p class="timesText">noon</p>
+                                        <i class="weatherIconFont" id="afternoonIcon"></i>
+                                        <h2 class="todaysTempsHour"><span id="afternoonTemp">00</span>°</h2>
+                                    </div>
+                                    <div class="col-4 text-center left-dotted-gradient">
+                                        <p class="timesText">8pm</p>
+                                        <i class="weatherIconFont fa-solid fa-moon" id="nightIcon"></i>
+                                        <h2 class="todaysTempsHour"><span id="nightTemp">00</span>°</h2>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row ps-4 align-items-center" style="height: 250px;">
-                            <div class="col-4 text-center">
-                                <p class="weatherIconFontLarge" id="currentWeatherIcon"></p>
+                        <!-- 5 DAY -->
+                        <div
+                            class="row mt-4 pt-4 pb-4 d-flex justify-content-center RobotoLightFont bgTopTransparent borderRadius">
+                            <div class="col pt-4 pb-3 text-center">
+                                <h5 id="dateDayOne" class="fiveDayText"></h5>
+                                <i class="weatherIconFont" id="dayOneIcon"></i>
+                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayOneHigh">00</span>°F | <span
+                                        id="dayOneLow">00</span>°F</p>
                             </div>
-                            <div class="col-7 text-end">
-                                <h2 class="tempText"><span id="currentTemp">00</span>°F</h2>
+                            <div class="col pt-4 text-center">
+                                <h5 id="dateDayTwo" class="fiveDayText"></h5>
+                                <i class="weatherIconFont" id="dayTwoIcon"></i>
+                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayTwoHigh">00</span>°F | <span
+                                        id="dayTwoLow">00</span>°F</p>
+                            </div>
+                            <div class="col pt-4 text-center">
+                                <h5 id="dateDayThree" class="fiveDayText"></h5>
+                                <i class="weatherIconFont" id="dayThreeIcon"></i>
+                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayThreeHigh">00</span>°F | <span
+                                        id="dayThreeLow">00</span>°F</p>
+                            </div>
+                            <div class="col pt-4 text-center">
+                                <h5 id="dateDayFour" class="fiveDayText"></h5>
+                                <i class="weatherIconFont" id="dayFourIcon"></i>
+                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayFourHigh">00</span>°F | <span
+                                        id="dayFourLow">00</span>°F</p>
+                            </div>
+                            <div class="col pt-4 text-center">
+                                <h5 id="dateDayFive" class="fiveDayText"></h5>
+                                <i class="weatherIconFont" id="dayFiveIcon"></i>
+                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayFiveHigh">00</span>°F | <span
+                                        id="dayFiveLow">00</span>°F</p>
                             </div>
                         </div>
 
-                        <div class="row ps-4 belowCityText pt-5 dotted-gradient">
-                            <div class="col">
-                                <p id="currentDesc"></p>
-                            </div>
-                            <div class="col">
-                                <p>H: <span id="currentHigh">00</span>°F L: <span id="currentLow">00</span>°F</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- TODAY -->
-                    <div class="col bgTopTransparent borderRadius ms-3">
-                        <div class="row ps-4 pt-4">
-                            <div class="col">
-                                <h4 class="RobotoLightFont headerText2">TODAY</h4>
-                            </div>
-                            <div class="col text-end pe-5">
-                                <p id="time" class="RobotoLightFont headerText2"></p>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-4 text-center">
-                                <p class="timesText">8am</p>
-                                <p class="weatherIconFont" id="morningIcon"></p>
-                                <h2 class="todaysTempsHour"><span id="morningTemp">00</span>°</h2>
-                            </div>
-                            <div class="col-4 text-center left-dotted-gradient">
-                                <p class="timesText">noon</p>
-                                <p class="weatherIconFont" id="afternoonIcon"></p>
-                                <h2 class="todaysTempsHour"><span id="afternoonTemp">00</span>°</h2>
-                            </div>
-                            <div class="col-4 text-center left-dotted-gradient">
-                                <p class="timesText">8pm</p>
-                                <p class="weatherIconFont" id="nightIcon"></p>
-                                <h2 class="todaysTempsHour"><span id="nightTemp">00</span>°</h2>
-                            </div>
-                        </div>
                     </div>
                 </div>
+                <!-- 2nd Row End -->
 
-                <!-- 5 DAY -->
-                <div
-                    class="row mt-4 pt-4 pb-4 d-flex justify-content-center RobotoLightFont bgTopTransparent borderRadius">
-                    <div class="col pt-4 pb-3 text-center">
-                        <h5 id="dateDayOne" class="fiveDayText"></h5>
-                        <p class="weatherIconFont" id="dayOneIcon"></p>
-                        <p class="RobotoRegularFont fiveDayTemp"><span id="dayOneHigh">00</span>°F | <span
-                                id="dayOneLow">00</span>°F</p>
-                    </div>
-                    <div class="col pt-4 text-center">
-                        <h5 id="dateDayTwo" class="fiveDayText"></h5>
-                        <p class="weatherIconFont" id="dayTwoIcon"></p>
-                        <p class="RobotoRegularFont fiveDayTemp"><span id="dayTwoHigh">00</span>°F | <span
-                                id="dayTwoLow">00</span>°F</p>
-                    </div>
-                    <div class="col pt-4 text-center">
-                        <h5 id="dateDayThree" class="fiveDayText"></h5>
-                        <p class="weatherIconFont" id="dayThreeIcon"></p>
-                        <p class="RobotoRegularFont fiveDayTemp"><span id="dayThreeHigh">00</span>°F | <span
-                                id="dayThreeLow">00</span>°F</p>
-                    </div>
-                    <div class="col pt-4 text-center">
-                        <h5 id="dateDayFour" class="fiveDayText"></h5>
-                        <p class="weatherIconFont" id="dayFourIcon"></p>
-                        <p class="RobotoRegularFont fiveDayTemp"><span id="dayFourHigh">00</span>°F | <span
-                                id="dayFourLow">00</span>°F</p>
-                    </div>
-                    <div class="col pt-4 text-center">
-                        <h5 id="dateDayFive" class="fiveDayText"></h5>
-                        <p class="weatherIconFont" id="dayFiveIcon"></p>
-                        <p class="RobotoRegularFont fiveDayTemp"><span id="dayFiveHigh">00</span>°F | <span
-                                id="dayFiveLow">00</span>°F</p>
-                    </div>
+                <div id="favoritesBtn" class=" container pt-4 d-flex justify-content-center" data-bs-toggle="modal"
+                    data-bs-target="#favoritesModal">
+                    <p
+                        class="my-0 text-center d-flex align-items-center favoritesBtnS bgTopTransparent RobotoRegularFont">
+                        <span class="heart-text sp-icon-open"><i class="fa-solid fa-heart"></i>
+                            Open Your
+                            Favorite Places
+                    </p>
                 </div>
+                <!-- 3rd Row End -->
+                <!-- Main End -->
 
             </div>
+
+            <!-- Blue Right -->
+            <div class="col-3 bgBlue">
+                <div class="container mt-5 pt-5">
+                    <div class="row pt-4">
+                        <div class="col">
+                            <div class="search-container mx-2 py-2 px-1">
+                                <form class="d-flex" style="width: 100%;">
+                                    <input id="userSearch" class="form-control me-2" type="text"
+                                        placeholder="Search for a City" aria-label="Search">
+                                    <button id="searchBtn" class="btn searchBtnStyle" type="button"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col pt-5">
+                        <div class="row px-3" style="width: 100%;">
+                            <form class="d-flex search-form" role="search">
+                                <div class="search-container">
+                                    <input id="userSearch" class="form-control me-2 searchBox" type="text"
+                                        placeholder="Search for a City" aria-label="Search">
+                                    <button id="searchBtn" class="btn searchBtn" type="button"><i
+                                            class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- FAVORITES -->
+                <div class="row">
+                    <div class="col pt-5 px-5">
+                        <p>Favorites</p>
+                        <hr>
+                        <p class="pt-5">No favorites to show</p>
+                        <p class="pt-5 pb-2">Add a city by clicking the heart icon</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <!--  -->
 
-    <!-- 2nd Row End -->
     </div>
-
-    <div id="favoritesBtn" class=" container pt-4 d-flex justify-content-center" data-bs-toggle="modal"
-        data-bs-target="#favoritesModal">
-        <p class="my-0 text-center d-flex align-items-center favoritesBtnS bgTopTransparent RobotoRegularFont"><span
-                class="heart-text sp-icon-open"><i class="fa-solid fa-heart"></i>
-                Open Your
-                Favorite Places</p>
-    </div>
-    <!-- 3rd Row End -->
-    <!-- Main End -->
-
-    <!-- Footer -->
-    <div class="row pt-5">
-        <div class="col text-center">
-            <p style="color: white;">handcrafted by Elizabeth Trotter</p>
-        </div>
-    </div>
-    <!-- Footer End -->
 
     <!-- Modal -->
     <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

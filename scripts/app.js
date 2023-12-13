@@ -123,25 +123,36 @@ async function hourlyWeatherAPI() {
 function setIcon(element, weather) {
     switch (weather) {
         case "Clear":
-            element.innerHTML = "1";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-sun");
             break;
         case "Clouds":
-            element.innerHTML = "A";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-cloud");
             break;
         case "Drizzle":
-            element.innerHTML = "M";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-cloud-rain");
             break;
         case "Rain":
-            element.innerHTML = "U";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-cloud-showers-heavy");
             break;
         case "Snow":
-            element.innerHTML = "I";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-snowflake");
             break;
         case "Thunderstorm":
-            element.innerHTML = "Q";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-bolt-lightning");
+            break;
+        case "Tornado":
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-tornado");
             break;
         default:
-            element.innerHTML = "Z";
+            element.className = "weatherIconFont";
+            element.classList.add("fa-solid", "fa-smog");
             break;
     }
 }
@@ -261,7 +272,7 @@ function hourlyForecast() {
     afternoonTemp.innerHTML = Math.round(afternoonTempsAverage);
 
     // setIcon(nightIcon, nightCondition);
-    nightIcon.innerHTML = "6";
+    // nightIcon.classList.add("fa-solid fa-moon");
     nightTemp.innerHTML = Math.round(nightTempsAverage);
 
     // 5 Day Forcast Set (Calculate Highest & Lowest)
@@ -303,7 +314,7 @@ searchBtn.addEventListener('click', function () {
 });
 
 // Local Storage
-if(localStorage.getItem("favorites")){
+if (localStorage.getItem("favorites")) {
     favoritesArray = JSON.parse(localStorage.getItem("favorites"))
 };
 
@@ -319,7 +330,7 @@ favoritesAddBtn.addEventListener('click', function () {
     updateFavoritesIcon();
 });
 
-function updateFavoritesIcon(){
+function updateFavoritesIcon() {
     if (favoritesArray.includes(userSearch.value.toUpperCase() || cityName.textContent)) {
         favoritesAddBtn.classList.remove("fa-regular");
         favoritesAddBtn.classList.add("fa-solid");
