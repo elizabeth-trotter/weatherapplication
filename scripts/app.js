@@ -111,7 +111,7 @@ async function reverseGeoAPI() {
     const data = await location.json();
     locationData = data;
 
-    cityName.innerHTML = locationData[0].name.toUpperCase();
+    cityName.innerHTML = locationData[0].name;
 }
 
 async function hourlyWeatherAPI() {
@@ -331,7 +331,7 @@ favoritesAddBtn.addEventListener('click', function () {
 });
 
 function updateFavoritesIcon() {
-    if (favoritesArray.includes(userSearch.value.toUpperCase() || cityName.textContent)) {
+    if (favoritesArray.includes(userSearch.value || cityName.textContent)) {
         favoritesAddBtn.classList.remove("fa-regular");
         favoritesAddBtn.classList.add("fa-solid");
     } else {
