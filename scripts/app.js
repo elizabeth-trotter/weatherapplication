@@ -157,14 +157,13 @@ function setIcon(element, weather) {
     }
 }
 
-
 // create a function to update the time
 function updateDateTime() {
     // create a new `Date` object
     const now = new Date();
 
     // get the current time as a string
-    const currentDateTime = now.toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric", timeZoneName: "short" });
+    const currentDateTime = now.toLocaleDateString('en-US', { month: 'long', day: "numeric", year: "numeric" }) + "&nbsp | &nbsp" + now.toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric", timeZoneName: "short" });
 
     // update the `innerHTML` property of the element with the `id` of `time`
     document.querySelector("#time").innerHTML = currentDateTime;
