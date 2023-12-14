@@ -167,6 +167,15 @@ function updateDateTime() {
 
     // update the `innerHTML` property of the element with the `id` of `time`
     document.querySelector("#time").innerHTML = currentDateTime;
+
+    // document.querySelector("body").className = "";
+    // document.querySelector("body").classList.add("backgroundDay");
+
+    //Check time for background
+    // if(currentDateTime.getHours() > 7 && currentDateTime.getHours() < 20){
+    //     document.querySelector("body").className = "";
+    //     document.querySelector("body").classList.add("backgroundDay");
+    // }
 }
 
 // call the `updateDateTime` function every second

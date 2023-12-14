@@ -9,8 +9,16 @@
     overflow-x: hidden;
 } */
 
-body {
+.backgroundDay {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/daytime.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.backgroundNight {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/night.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
