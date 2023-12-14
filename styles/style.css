@@ -100,6 +100,10 @@ body {
     letter-spacing: 10px;
 }
 
+.spacingdatetime {
+    letter-spacing: 5px;
+}
+
 .tempText {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;

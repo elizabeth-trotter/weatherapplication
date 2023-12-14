@@ -111,7 +111,7 @@ async function reverseGeoAPI() {
     const data = await location.json();
     locationData = data;
 
-    cityName.innerHTML = locationData[0].name;
+    cityName.innerHTML = locationData[0].name + ", " + locationData[0].state;
 }
 
 async function hourlyWeatherAPI() {
@@ -164,7 +164,7 @@ function updateDateTime() {
     const now = new Date();
 
     // get the current time as a string
-    const currentDateTime = now.toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric" });
+    const currentDateTime = now.toLocaleTimeString('en-US', { hour: "numeric", minute: "numeric", timeZoneName: "short" });
 
     // update the `innerHTML` property of the element with the `id` of `time`
     document.querySelector("#time").innerHTML = currentDateTime;
