@@ -3,12 +3,7 @@
     font-size: 2.5rem;
 }
 
-/* Font Families */
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Oswald', sans-serif; */
-
 /* All */
-
 /* html {
     max-width: 100%;
     overflow-x: hidden;
@@ -20,45 +15,12 @@ body {
     background-position: center;
     background-size: cover;
     color: #ffffff;
-    /* opacity: 0.5; */
-    /* background: rgb(174, 163, 255);
-    background: linear-gradient(90deg, rgba(174, 163, 255, 1) 36%, rgba(103, 113, 255, 1) 56%); */
 }
 
 /* Navbar */
 .bgBlue {
     background-color: #1D2837;
 }
-
-/* .search-form {
-    display: flex;
-    align-items: center; 
-}
-
-
-.search-container {
-    position: relative;
-}
-
-.searchBox {
-    width: 100%;
-    max-width: 320px;
-    height: 58px;
-    border-radius: 8px;
-    font-family: 'Oswald', sans-serif;
-    padding-right: 50px; 
-}
-
-.searchBtn {
-    position: absolute;
-    top: 50%;
-    right: 10px; 
-    transform: translateY(-50%); 
-    border-radius: 15px;
-    background-color: #FFFFFF;
-    color: #000000;
-    font-size: 20px;
-} */
 
 .search-container {
     display: flex;
@@ -113,45 +75,16 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
-/* .borderDotted {
-    border-right: 2px dotted #131313;
-    height: 230px;
-}
-
-.left-dotted-gradient {
-    background-image: linear-gradient(to bottom, #000 40%, rgba(255, 255, 255, 0) 10%);
-    background-position: left;
-    background-size: 2px 8px;
-    background-repeat: repeat-y;
-}
-
-.dotted-gradient {
-    background-image: linear-gradient(to right, #000 30%, rgba(255, 255, 255, 0) 10%);
-    background-position: top;
-    background-size: 8px 2px;
-    background-repeat: repeat-x;
-}*/
-
 /* Text */
 #favoritesAddBtn {
     cursor: pointer;
 }
 
-.RobotoLightFont {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-}
-
 .headerText {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
 }
-
-/* .headerText2 {
-    letter-spacing: 3px;
-    font-size: 23px;
-} */
 
 .spacing {
     letter-spacing: 20px;
@@ -182,11 +115,15 @@ body {
 }
 
 .fiveDayText {
-    font-size: 23px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 .fiveDayTemp {
-    font-size: 21px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 .favoritesBtnS {
@@ -220,10 +157,6 @@ body {
 }
 
 /* Background */
-.bgTransparent {
-    background: rgba(255, 255, 255, 0.33);
-}
-
 .bgTopTransparent {
     background-color: rgba(34, 31, 31, 0.127); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
     backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
