@@ -184,11 +184,11 @@ function getDates() {
     futureDate5 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
 
     //Set Dates for Forecast
-    dateDayOne.innerHTML = futureDate1.toLocaleDateString('en-US', { weekday: "short" }).toUpperCase() + " " + futureDate1.toLocaleDateString('en-US', { month: "2-digit", day: "numeric" }).toUpperCase();
-    dateDayTwo.innerHTML = futureDate2.toLocaleDateString('en-US', { weekday: "short" }).toUpperCase() + " " + futureDate2.toLocaleDateString('en-US', { month: "2-digit", day: "numeric" }).toUpperCase();
-    dateDayThree.innerHTML = futureDate3.toLocaleDateString('en-US', { weekday: "short" }).toUpperCase() + " " + futureDate3.toLocaleDateString('en-US', { month: "2-digit", day: "numeric" }).toUpperCase();
-    dateDayFour.innerHTML = futureDate4.toLocaleDateString('en-US', { weekday: "short" }).toUpperCase() + " " + futureDate4.toLocaleDateString('en-US', { month: "2-digit", day: "numeric" }).toUpperCase();
-    dateDayFive.innerHTML = futureDate5.toLocaleDateString('en-US', { weekday: "short" }).toUpperCase() + " " + futureDate5.toLocaleDateString('en-US', { month: "2-digit", day: "numeric" }).toUpperCase();
+    dateDayOne.innerHTML = futureDate1.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate1.toLocaleDateString('en-US', { month: "short", day: "numeric" });
+    dateDayTwo.innerHTML = futureDate2.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate2.toLocaleDateString('en-US', { month: "short", day: "numeric" });
+    dateDayThree.innerHTML = futureDate3.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate3.toLocaleDateString('en-US', { month: "short", day: "numeric" });
+    dateDayFour.innerHTML = futureDate4.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate4.toLocaleDateString('en-US', { month: "short", day: "numeric" });
+    dateDayFive.innerHTML = futureDate5.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate5.toLocaleDateString('en-US', { month: "short", day: "numeric" });
 }
 
 function hourlyForecast() {

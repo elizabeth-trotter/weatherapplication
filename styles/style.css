@@ -86,8 +86,18 @@ body {
     font-size: 25px;
 }
 
+.headerText2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
 .spacing {
     letter-spacing: 20px;
+}
+
+.spacing5day {
+    letter-spacing: 10px;
 }
 
 .tempText {
@@ -163,3 +173,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
 }
 
+.bgBlueBody {
+    background-color: #1D2837;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
