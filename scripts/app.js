@@ -368,7 +368,7 @@ function addElement(city) {
     // Create a new div element for the row
     const newRow = document.createElement("div");
     newRow.classList.add("row", "mb-2", "align-items-center"); // Add Bootstrap classes for spacing
-    newRow.style.backgroundColor = "#ffffff";
+    newRow.style.backgroundColor = "#1D2837";
     newRow.style.borderRadius = "10px";
     newRow.style.padding = "10px";
 
