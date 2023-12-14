@@ -133,6 +133,10 @@ body {
 }*/
 
 /* Text */
+#favoritesAddBtn {
+    cursor: pointer;
+}
+
 .RobotoLightFont {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -141,13 +145,17 @@ body {
 .headerText {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 25px;
 }
 
 /* .headerText2 {
     letter-spacing: 3px;
     font-size: 23px;
 } */
+
+.spacing {
+    letter-spacing: 20px;
+}
 
 .tempText {
     font-family: 'Montserrat', sans-serif;
@@ -161,21 +169,16 @@ body {
     font-size: 22px;
 }
 
-.RobotoRegularFont {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-}
-
 .timesText {
     font-family: 'Oswald', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 22px;
 }
 
 .todaysTempsHour {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 35px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
 }
 
 .fiveDayText {

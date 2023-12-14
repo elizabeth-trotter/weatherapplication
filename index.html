@@ -46,7 +46,7 @@
                             <h1 class="bodyTitle">Weather Report</h1>
                         </div>
                         <div class="row">
-                            <p class="bodyTitleSmall pt-3 ps-3">December 11, 2023 | 5:46 PM PST</p>
+                            <p class="bodyTitleSmall pt-3 ps-3">December 11, 2023 | <span id="time"></span> PST</p>
                         </div>
                     </div>
                 </div>
@@ -70,51 +70,47 @@
                                 </div>
 
                                 <div class="row pt-5 me-5 align-items-center">
-                                    <div class="col text-end">
+                                    <div class="col-5 text-end">
                                         <i class="" id="currentWeatherIcon" style="font-size: 6rem;"></i>
                                     </div>
-                                    <div class="col text-start">
-                                        <h2 class="tempText"><span id="currentTemp">00</span>°F</h2>
+                                    <div class="col ps-5 text-start">
+                                        <h2 class="tempText"><span id="currentTemp">00</span> °F</h2>
                                     </div>
                                 </div>
 
                                 <div class="row pt-5 pb-3 px-4 belowCityText pt-3">
                                     <div class="col text-start">
-                                        <p><span id="currentDesc"></span></p>
+                                        <p>currently <span id="currentDesc"></span></p>
                                     </div>
                                     <div class="col text-end">
-                                        <p>H: <span id="currentHigh">00</span>° L: <span id="currentLow">00</span>°
+                                        <p>H: <span id="currentHigh">00</span> °<span class="spacing"> </span> L: <span
+                                                id="currentLow">00</span> °
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- TODAY -->
-                            <div class="col bgTopTransparent borderRadius ms-3">
-                                <div class="row ps-4 pt-5">
-                                    <div class="col">
-                                        <h4 class="headerText">Today</h4>
-                                    </div>
-                                    <div class="col text-end pe-5">
-                                        <p id="time" class="headerText"></p>
-                                    </div>
+                            <div class="col bgTopTransparent borderRadius ms-4">
+                                <div class="row pt-4 mt-1">
+                                    <h4 class="headerText text-center">Today</h4>
                                 </div>
 
-                                <div class="row pt-5">
+                                <div class="row pt-4 mt-2">
                                     <div class="col-4 text-center">
-                                        <p class="timesText pb-4">8 am</p>
+                                        <p class="timesText pb-4">Morning</p>
                                         <i class="weatherIconFont" id="morningIcon"></i>
-                                        <h2 class="todaysTempsHour pt-4 mt-2"><span id="morningTemp">00</span>°F</h2>
+                                        <h2 class="todaysTempsHour pt-4 mt-4"><span id="morningTemp">00</span> °F</h2>
                                     </div>
                                     <div class="col-4 text-center left-dotted-gradient">
-                                        <p class="timesText pb-4">noon</p>
+                                        <p class="timesText pb-4">Afternoon</p>
                                         <i class="weatherIconFont" id="afternoonIcon"></i>
-                                        <h2 class="todaysTempsHour pt-4 mt-2"><span id="afternoonTemp">00</span>°F</h2>
+                                        <h2 class="todaysTempsHour pt-4 mt-4"><span id="afternoonTemp">00</span> °F</h2>
                                     </div>
                                     <div class="col-4 text-center left-dotted-gradient">
-                                        <p class="timesText pb-4">8 pm</p>
+                                        <p class="timesText pb-4">Night</p>
                                         <i class="weatherIconFont fa-solid fa-moon" id="nightIcon"></i>
-                                        <h2 class="todaysTempsHour pt-4 mt-2"><span id="nightTemp">00</span>°F</h2>
+                                        <h2 class="todaysTempsHour pt-4 mt-4"><span id="nightTemp">00</span> °F</h2>
                                     </div>
                                 </div>
                             </div>
