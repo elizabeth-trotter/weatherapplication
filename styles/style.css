@@ -109,6 +109,10 @@ body {
     border-radius: 8px;
 }
 
+.borderRadiusCity {
+    border-radius: 8px 8px 0 0;
+}
+
 /* .borderDotted {
     border-right: 2px dotted #131313;
     height: 230px;
@@ -137,7 +141,7 @@ body {
 .headerText {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 /* .headerText2 {
@@ -152,9 +156,9 @@ body {
 }
 
 .belowCityText {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
 }
 
 .RobotoRegularFont {

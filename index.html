@@ -57,8 +57,8 @@
                     <div class="col ms-2">
                         <div class="row">
                             <!-- CURRENT -->
-                            <div class="col-5 bgTopTransparent borderRadius">
-                                <div class="row ps-4 pt-5">
+                            <div class="col bgTopTransparent borderRadius">
+                                <div class="row bgBlue borderRadiusCity ps-4 pt-4 pb-3 align-items-center">
                                     <div class="col">
                                         <h4 id="cityName" class="headerText">City</h4>
                                     </div>
@@ -69,21 +69,21 @@
                                     </div>
                                 </div>
 
-                                <div class="row ps-4 align-items-center" style="height: 250px;">
-                                    <div class="col-4 text-center">
+                                <div class="row pt-5 me-5 align-items-center">
+                                    <div class="col text-end">
                                         <i class="" id="currentWeatherIcon" style="font-size: 6rem;"></i>
                                     </div>
-                                    <div class="col-7 text-end">
+                                    <div class="col text-start">
                                         <h2 class="tempText"><span id="currentTemp">00</span>°F</h2>
                                     </div>
                                 </div>
 
-                                <div class="row ps-4 belowCityText pt-5 dotted-gradient">
-                                    <div class="col">
-                                        <p id="currentDesc"></p>
+                                <div class="row pt-5 pb-3 px-4 belowCityText pt-3">
+                                    <div class="col text-start">
+                                        <p><span id="currentDesc"></span></p>
                                     </div>
-                                    <div class="col">
-                                        <p>H: <span id="currentHigh">00</span>°F L: <span id="currentLow">00</span>°F
+                                    <div class="col text-end">
+                                        <p>H: <span id="currentHigh">00</span>° L: <span id="currentLow">00</span>°
                                         </p>
                                     </div>
                                 </div>
@@ -121,38 +121,47 @@
                         </div>
 
                         <!-- 5 DAY -->
-                        <div
-                            class="row mt-4 pt-4 pb-4 d-flex justify-content-center RobotoLightFont bgTopTransparent borderRadius">
-                            <div class="col pt-4 pb-3 text-center">
-                                <h5 id="dateDayOne" class="fiveDayText"></h5>
-                                <i class="weatherIconFont" id="dayOneIcon"></i>
-                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayOneHigh">00</span>°F | <span
-                                        id="dayOneLow">00</span>°F</p>
+                        <div class="row mt-4 pt-4 pb-4 d-flex justify-content-center bgTopTransparent borderRadius">
+
+                            <div class="row pt-4">
+                                <div class="col">
+                                    <h4 class="headerText text-center">5 Day Forecast</h4>
+                                </div>
                             </div>
-                            <div class="col pt-4 text-center">
-                                <h5 id="dateDayTwo" class="fiveDayText"></h5>
-                                <i class="weatherIconFont" id="dayTwoIcon"></i>
-                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayTwoHigh">00</span>°F | <span
-                                        id="dayTwoLow">00</span>°F</p>
+
+                            <div class="row pt-5">
+                                <div class="col pt-4 pb-3 text-center">
+                                    <h5 id="dateDayOne" class="fiveDayText pb-4"></h5>
+                                    <i class="weatherIconFont" id="dayOneIcon"></i>
+                                    <p class="RobotoRegularFont fiveDayTemp pt-4 mt-2"><span id="dayOneHigh">00</span>°F
+                                        | <span id="dayOneLow">00</span>°F</p>
+                                </div>
+                                <div class="col pt-4 text-center">
+                                    <h5 id="dateDayTwo" class="fiveDayText pb-4"></h5>
+                                    <i class="weatherIconFont" id="dayTwoIcon"></i>
+                                    <p class="RobotoRegularFont fiveDayTemp pt-4 mt-2"><span id="dayTwoHigh">00</span>°F
+                                        | <span id="dayTwoLow">00</span>°F</p>
+                                </div>
+                                <div class="col pt-4 text-center">
+                                    <h5 id="dateDayThree" class="fiveDayText pb-4"></h5>
+                                    <i class="weatherIconFont" id="dayThreeIcon"></i>
+                                    <p class="RobotoRegularFont fiveDayTemp pt-4 mt-2"><span
+                                            id="dayThreeHigh">00</span>°F | <span id="dayThreeLow">00</span>°F</p>
+                                </div>
+                                <div class="col pt-4 text-center">
+                                    <h5 id="dateDayFour" class="fiveDayText pb-4"></h5>
+                                    <i class="weatherIconFont" id="dayFourIcon"></i>
+                                    <p class="RobotoRegularFont fiveDayTemp pt-4 mt-2"><span
+                                            id="dayFourHigh">00</span>°F | <span id="dayFourLow">00</span>°F</p>
+                                </div>
+                                <div class="col pt-4 text-center">
+                                    <h5 id="dateDayFive" class="fiveDayText pb-4"></h5>
+                                    <i class="weatherIconFont" id="dayFiveIcon"></i>
+                                    <p class="RobotoRegularFont fiveDayTemp pt-4 mt-2"><span
+                                            id="dayFiveHigh">00</span>°F | <span id="dayFiveLow">00</span>°F</p>
+                                </div>
                             </div>
-                            <div class="col pt-4 text-center">
-                                <h5 id="dateDayThree" class="fiveDayText"></h5>
-                                <i class="weatherIconFont" id="dayThreeIcon"></i>
-                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayThreeHigh">00</span>°F | <span
-                                        id="dayThreeLow">00</span>°F</p>
-                            </div>
-                            <div class="col pt-4 text-center">
-                                <h5 id="dateDayFour" class="fiveDayText"></h5>
-                                <i class="weatherIconFont" id="dayFourIcon"></i>
-                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayFourHigh">00</span>°F | <span
-                                        id="dayFourLow">00</span>°F</p>
-                            </div>
-                            <div class="col pt-4 text-center">
-                                <h5 id="dateDayFive" class="fiveDayText"></h5>
-                                <i class="weatherIconFont" id="dayFiveIcon"></i>
-                                <p class="RobotoRegularFont fiveDayTemp"><span id="dayFiveHigh">00</span>°F | <span
-                                        id="dayFiveLow">00</span>°F</p>
-                            </div>
+
                         </div>
 
                     </div>
