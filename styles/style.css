@@ -74,9 +74,7 @@
     max-height: 200px; /* Maximum height of the dropdown to enable scrolling */
     overflow-y: auto; /* Enable vertical scrolling if the content overflows */
     max-width: 100%; /* Set a maximum width for the dropdown */
-    overflow-x: hidden; /* Hide horizontal overflow */
     position: absolute;
-    width: 100%;
     z-index: 1; /* Ensure the dropdown appears above other elements */
 }
 
