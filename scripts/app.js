@@ -370,7 +370,7 @@ function showAutocompleteDropdown(cityOptions) {
 
     for (let i = 0; i < cityOptions.length; i++) {
         if (duplicateCheck.includes(cityOptions[i].state)) {
-        }else {
+        } else {
             const option = document.createElement('div');
             option.textContent = cityOptions[i].name + ", " + cityOptions[i].state;
             option.classList.add('autocomplete-option');
@@ -391,7 +391,29 @@ function showAutocompleteDropdown(cityOptions) {
     }
 
     autocompleteDropdown.style.display = 'block';
+
+    //  // Clear previous timeout (if any)
+    //  clearTimeout(hideDropdownTimeout);
+
+    //  // Set a new timeout to hide the dropdown after 5 seconds
+    //  hideDropdownTimeout = setTimeout(() => {
+    //      hideAutocompleteDropdown();
+    //  }, 5000);
 }
+
+// Event listener for mouseenter on the autocomplete dropdown
+autocompleteDropdown.addEventListener('mouseenter', () => {
+    // Clear the timeout to prevent hiding
+    clearTimeout(hideDropdownTimeout);
+});
+
+// Event listener for mouseleave on the autocomplete dropdown
+autocompleteDropdown.addEventListener('mouseleave', () => {
+    // Set a new timeout to hide the dropdown after 5 seconds
+    hideDropdownTimeout = setTimeout(() => {
+        hideAutocompleteDropdown();
+    }, 1500);
+});
 
 // Hide the autocomplete dropdown
 function hideAutocompleteDropdown() {
@@ -457,7 +479,7 @@ function addElement(city) {
     cityNameColumn.appendChild(cityNameContent);
     cityNameColumn.addEventListener("click", () => {
         $('#favoritesModal').modal('hide'); // Close the modal (jQuery)
-        
+
         userSearch.value = city;
         success(userSearch.value); // Return to the weather application for the chosen city
     });
