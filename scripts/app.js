@@ -111,7 +111,11 @@ async function reverseGeoAPI() {
     const data = await location.json();
     locationData = data;
 
-    cityName.innerHTML = locationData[0].name + ", " + locationData[0].state;
+    if(locationData[0].state){
+        cityName.innerHTML = locationData[0].name + ", " + locationData[0].state;
+    }else{
+        cityName.innerHTML = locationData[0].name;
+    }  
 }
 
 async function hourlyWeatherAPI() {
