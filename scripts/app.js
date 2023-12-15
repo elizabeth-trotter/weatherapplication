@@ -59,7 +59,7 @@ navigator.geolocation.getCurrentPosition(success, errorFunc);
 async function success(position) {
 
     if (userSearch.value) {
-        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value}&limit=5&appid=${apiKey}`);
+        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value},US&limit=5&appid=${apiKey}`);
         const data = await promise.json();
         userLat = data[0].lat;
         userLon = data[0].lon;
@@ -346,7 +346,7 @@ userSearch.addEventListener('input', function () {
 // Fetch geocoding data from the API
 async function fetchGeocodingData(input) {
     // Replace this with your actual geocoding API endpoint and logic
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=${apiKey}`);
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
     const data = await promise.json();
     console.log(data);
     // Check if there are multiple city options
