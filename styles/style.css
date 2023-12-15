@@ -30,6 +30,7 @@
     background-color: #1D2837;
 }
 
+/* Search */
 .search-container {
     display: flex;
     align-items: center;
@@ -59,6 +60,29 @@
 .searchBtnStyle:hover {
     background-color: #EDA169;
     color: #FFFFFF;
+}
+
+/* Favorites */
+hr {
+    border: none;
+    height: 2.2px;
+    /* Set the hr color */
+    color: #ffffff;
+    /* old IE */
+    background-color: #ffffff;
+    /* Modern Browsers */
+}
+
+.favHeader {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.favCities {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 21px;
 }
 
 /* Body */
@@ -165,24 +189,32 @@
 }
 
 .modal-content {
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust the last parameter (0.9) for transparency */
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Adjust the last parameter (0.9) for transparency */
 }
 
 #favoritesModal {
-    left: 0;     /* Position the modal to the left */
-    right: auto; /* Reset the default right positioning */
+    left: 0;
+    /* Position the modal to the left */
+    right: auto;
+    /* Reset the default right positioning */
 }
 
 .modal-dialog {
-    margin-right: auto; /* Center the modal horizontally */
-    margin-left: 0;     /* Reset the default left margin */
+    margin-right: auto;
+    /* Center the modal horizontally */
+    margin-left: 0;
+    /* Reset the default left margin */
 }
 
 /* Background */
 .bgTopTransparent {
-    background-color: rgba(34, 31, 31, 0.127); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
+    background-color: rgba(34, 31, 31, 0.127);
+    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur radius as needed */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Apply drop shadow to bottom and right sides */
 }
 
 .bgBlueBody {
