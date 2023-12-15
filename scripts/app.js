@@ -361,21 +361,19 @@ async function fetchGeocodingData(input) {
 function showAutocompleteDropdown(cityOptions) {
     autocompleteDropdown.innerHTML = '';
 
- 
-        const option = document.createElement('div');
-        for (let i = 0; i < cityOptions.length; i++) {
-            option.textContent = cityOptions[i].name;
-            console.log(cityOptions[i].name);
+    for (let i = 0; i < cityOptions.length; i++) {
+            const option = document.createElement('div');
+            option.textContent = cityOptions[i].name + ", " + cityOptions[i].state;
+            console.log(cityOptions[i].name + ", " + cityOptions[i].state);
             option.classList.add('autocomplete-option');
+            
+            option.addEventListener('click', function () {
+                // Handle the selection of a city option
+                handleCitySelection(city);
+            });
+
+            autocompleteDropdown.appendChild(option);
         }
-
-        option.addEventListener('click', function () {
-            // Handle the selection of a city option
-            handleCitySelection(city);
-        });
-
-        autocompleteDropdown.appendChild(option);
- 
 
     autocompleteDropdown.style.display = 'block';
 }

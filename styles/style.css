@@ -62,6 +62,37 @@
     color: #FFFFFF;
 }
 
+.autocomplete-dropdown {
+    color: #000000;
+    font-family: 'Oswald', sans-serif;
+    background-color: rgba(255, 255, 255, 0.323);
+    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur radius as needed */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+    max-height: 200px; /* Maximum height of the dropdown to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
+    max-width: 100%; /* Set a maximum width for the dropdown */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    position: absolute;
+    width: 100%;
+    z-index: 1; /* Ensure the dropdown appears above other elements */
+}
+
+.autocomplete-option {
+    padding: 8px 16px; /* Padding around each option */
+    cursor: pointer; /* Change cursor to a pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.autocomplete-option:hover {
+    color: #EDA169;
+    background-color: #FFFFFF;
+    /* background-color: #f0f0f0; */
+}
+
+
 /* Favorites */
 hr {
     border: none;
