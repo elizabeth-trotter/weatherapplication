@@ -111,11 +111,11 @@ async function reverseGeoAPI() {
     const data = await location.json();
     locationData = data;
 
-    if(locationData[0].state){
+    if (locationData[0].state) {
         cityName.innerHTML = locationData[0].name + ", " + locationData[0].state;
-    }else{
+    } else {
         cityName.innerHTML = locationData[0].name;
-    }  
+    }
 }
 
 async function hourlyWeatherAPI() {
@@ -324,6 +324,96 @@ searchBtn.addEventListener('click', function () {
     updateFavoritesIcon();
     userSearch.value = "";
 });
+
+//Autocomplete
+const autocompleteDropdown = document.getElementById("autocompleteDropdown");
+
+// Listen for input changes in the search box
+userSearch.addEventListener('input', function () {
+    const inputValue = userSearch.value.trim();
+
+    // Check if the input length is greater than 3 characters
+    if (inputValue.length >= 3) {
+        // Make a request to the geocoding API
+        fetchGeocodingData(inputValue)
+
+    } else {
+        // If input length is less than 3 characters, hide the dropdown
+        hideAutocompleteDropdown();
+    }
+});
+
+// Fetch geocoding data from the API
+async function fetchGeocodingData(input) {
+    // Replace this with your actual geocoding API endpoint and logic
+    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=5&appid=${apiKey}`);
+    const data = await promise.json();
+    console.log(data);
+    // Check if there are multiple city options
+    if (data.length > 1) {
+        showAutocompleteDropdown(data);
+    } else {
+        hideAutocompleteDropdown();
+    }
+}
+
+// Show the autocomplete dropdown with city options
+function showAutocompleteDropdown(cityOptions) {
+    autocompleteDropdown.innerHTML = '';
+
+ 
+        const option = document.createElement('div');
+        for (let i = 0; i < cityOptions.length; i++) {
+            option.textContent = cityOptions[i].name;
+            console.log(cityOptions[i].name);
+            option.classList.add('autocomplete-option');
+        }
+
+        option.addEventListener('click', function () {
+            // Handle the selection of a city option
+            handleCitySelection(city);
+        });
+
+        autocompleteDropdown.appendChild(option);
+ 
+
+    autocompleteDropdown.style.display = 'block';
+}
+
+// Hide the autocomplete dropdown
+function hideAutocompleteDropdown() {
+    autocompleteDropdown.innerHTML = '';
+    autocompleteDropdown.style.display = 'none';
+}
+
+// Handle the selection of a city from the dropdown
+function handleCitySelection(city) {
+    // Fetch weather data for the selected city and display it
+    fetchWeatherData(city.lat, city.lon)
+        .then(weatherData => {
+            // Display the weather data (replace with your actual logic)
+            console.log('Weather data for selected city:', weatherData);
+        })
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+        });
+
+    // Hide the autocomplete dropdown after selection
+    hideAutocompleteDropdown();
+}
+
+// Fetch weather data for a given latitude and longitude (replace with your actual API call)
+function fetchWeatherData(latitude, longitude) {
+    const apiUrl = `https://your-weather-api.com?lat=${latitude}&lon=${longitude}`;
+
+    return fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => data)
+        .catch(error => {
+            console.error('Error fetching weather data:', error);
+            return null;
+        });
+}
 
 // Local Storage
 if (localStorage.getItem("favorites")) {
