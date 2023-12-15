@@ -51,6 +51,9 @@ let favoritesArray = [];
 let userLat, userLon;
 let currentWeatherData, locationData, hourlyWeatherData;
 let todayUnix, todayDateTime, futureDate1, futureDate2, futureDate3, futureDate4, futureDate5;
+let stateCode = "";
+let countryCode = "US";
+let limit = 5;
 
 //Geo location is a built in API that allows the user to share their location upon request
 navigator.geolocation.getCurrentPosition(success, errorFunc);
@@ -59,7 +62,7 @@ navigator.geolocation.getCurrentPosition(success, errorFunc);
 async function success(position) {
 
     if (userSearch.value) {
-        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value},US&limit=5&appid=${apiKey}`);
+        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value},${stateCode},${countryCode}&limit=${limit}&appid=${apiKey}`);
         const data = await promise.json();
         userLat = data[0].lat;
         userLon = data[0].lon;
@@ -316,6 +319,7 @@ userSearch.addEventListener('keypress', function (e) {
         e.preventDefault();
         updateFavoritesIcon();
         userSearch.value = "";
+        hideAutocompleteDropdown();
         return false;
     }
 });
@@ -323,6 +327,7 @@ searchBtn.addEventListener('click', function () {
     success(userSearch.value);
     updateFavoritesIcon();
     userSearch.value = "";
+    hideAutocompleteDropdown();
 });
 
 //Autocomplete
@@ -361,19 +366,29 @@ async function fetchGeocodingData(input) {
 function showAutocompleteDropdown(cityOptions) {
     autocompleteDropdown.innerHTML = '';
 
+    let duplicateCheck = [];
+
     for (let i = 0; i < cityOptions.length; i++) {
+        if (duplicateCheck.includes(cityOptions[i].state)) {
+        }else {
             const option = document.createElement('div');
             option.textContent = cityOptions[i].name + ", " + cityOptions[i].state;
-            console.log(cityOptions[i].name + ", " + cityOptions[i].state);
             option.classList.add('autocomplete-option');
-            
+
             option.addEventListener('click', function () {
                 // Handle the selection of a city option
-                handleCitySelection(city);
+                stateCode = cityOptions[i].state;
+                userSearch.value = cityOptions[i].name;
+                success(userSearch.value); // Return to the weather application for the chosen city
+                hideAutocompleteDropdown();
+                stateCode = "";
             });
 
             autocompleteDropdown.appendChild(option);
+
+            duplicateCheck.push(cityOptions[i].state);
         }
+    }
 
     autocompleteDropdown.style.display = 'block';
 }
@@ -382,35 +397,6 @@ function showAutocompleteDropdown(cityOptions) {
 function hideAutocompleteDropdown() {
     autocompleteDropdown.innerHTML = '';
     autocompleteDropdown.style.display = 'none';
-}
-
-// Handle the selection of a city from the dropdown
-function handleCitySelection(city) {
-    // Fetch weather data for the selected city and display it
-    fetchWeatherData(city.lat, city.lon)
-        .then(weatherData => {
-            // Display the weather data (replace with your actual logic)
-            console.log('Weather data for selected city:', weatherData);
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-        });
-
-    // Hide the autocomplete dropdown after selection
-    hideAutocompleteDropdown();
-}
-
-// Fetch weather data for a given latitude and longitude (replace with your actual API call)
-function fetchWeatherData(latitude, longitude) {
-    const apiUrl = `https://your-weather-api.com?lat=${latitude}&lon=${longitude}`;
-
-    return fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => data)
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            return null;
-        });
 }
 
 // Local Storage
@@ -471,6 +457,7 @@ function addElement(city) {
     cityNameColumn.appendChild(cityNameContent);
     cityNameColumn.addEventListener("click", () => {
         $('#favoritesModal').modal('hide'); // Close the modal (jQuery)
+        
         userSearch.value = city;
         success(userSearch.value); // Return to the weather application for the chosen city
     });
