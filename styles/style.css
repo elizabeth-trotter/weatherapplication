@@ -13,7 +13,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/daytime.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
     color: #ffffff;
 }
 
@@ -92,9 +92,14 @@
 
 
 /* Favorites */
+.favoritesScroll {
+    max-height: 40rem; /* Maximum height of the dropdown to enable scrolling */
+    overflow-y: auto;
+}
+
 hr {
     border: none;
-    height: 2.2px;
+    height: 2px;
     /* Set the hr color */
     color: #ffffff;
     /* old IE */

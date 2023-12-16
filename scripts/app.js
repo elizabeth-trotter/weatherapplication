@@ -353,7 +353,7 @@ async function fetchGeocodingData(input) {
     // Replace this with your actual geocoding API endpoint and logic
     const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
     const data = await promise.json();
-    console.log(data);
+
     // Check if there are multiple city options
     if (data.length > 1) {
         showAutocompleteDropdown(data);
@@ -460,13 +460,13 @@ function createFavorites() {
 
     if (favoritesArray.length > 0) {
         // Loop through each favorite city and create divs with city names and delete buttons
-        favoritesArray.forEach(city => {
+        favoritesArray.forEach(location => {
             // Create a div for the city
             const cityDiv = document.createElement('div');
-            cityDiv.textContent = city;
-            cityDiv.classList.add('favCities', 'px-3','pb-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
+            cityDiv.textContent = location;
+            cityDiv.classList.add('favCities', 'px-3', 'pb-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
 
-            if(city === favoritesArray[favoritesArray.length - 1]){
+            if (location === favoritesArray[favoritesArray.length - 1]) {
                 cityDiv.classList.remove('border-bottom', 'mb-4', 'pb-4');
                 cityDiv.classList.add('pb-2');
             }
@@ -480,7 +480,7 @@ function createFavorites() {
             // Remove default button styling
             deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
 
-            deleteButton.addEventListener('click', () => removeFavorite(city));
+            deleteButton.addEventListener('click', () => removeFavorite(location));
 
             // Style the city div and delete button
             cityDiv.style.display = 'flex'; // Use flex to control the layout
@@ -492,8 +492,16 @@ function createFavorites() {
             // Append the container div to the favorites list
             favoritesNav.appendChild(cityDiv);
 
+            cityDiv.addEventListener('click', function () {
+                let locationArr = location.split(", ");
+                userSearch.value = locationArr[0];
+                stateCode = locationArr[1];
+                success(userSearch.value);
+                updateFavoritesIcon();
+            });
+
         });
-    }else{
+    } else {
         const placeholderDiv = document.createElement('div');
         placeholderDiv.classList.add('text-center', 'py-5');
 
@@ -528,79 +536,3 @@ function removeFavorite(city) {
 
 
 
-
-//MOBILE ??
-
-//Create Elements on Open Modal
-let favoritesList = document.getElementById("favoritesList");
-const favoritesModal = document.getElementById('favoritesModal');
-
-// Assuming using Bootstrap for modal, use the 'shown.bs.modal' event
-favoritesModal.addEventListener('shown.bs.modal', event => {
-    // Clear the existing content before adding the elements
-    favoritesList.innerHTML = "";
-
-    // Loop through the favoritesArray and add each city to the modal
-    for (let i = 0; i < favoritesArray.length; i++) {
-        addElement(favoritesArray[i]);
-    }
-});
-
-function addElement(city) {
-    // Create a new div element for the row
-    const newRow = document.createElement("div");
-    newRow.classList.add("row", "mb-2", "align-items-center"); // Add Bootstrap classes for spacing
-    newRow.style.backgroundColor = "#1D2837";
-    newRow.style.borderRadius = "10px";
-    newRow.style.padding = "10px";
-
-    // Create a new div element for the city name (left column)
-    const cityNameColumn = document.createElement("div");
-    cityNameColumn.classList.add("col");
-    const cityNameContent = document.createTextNode(city);
-    cityNameColumn.appendChild(cityNameContent);
-
-    cityNameColumn.addEventListener("click", () => {
-        $('#favoritesModal').modal('hide'); // Close the modal (jQuery)
-
-        userSearch.value = city;
-        success(userSearch.value); // Return to the weather application for the chosen city
-    });
-
-    // Create a new div element for the remove button (right column)
-    const removeButtonColumn = document.createElement("div");
-    removeButtonColumn.classList.add("col-auto"); // "col-auto" for a column that only takes the necessary space
-    const removeButton = document.createElement("button");
-    removeButton.classList.add("btn", "remove-button", "btn-md"); // Add Bootstrap button classes
-    removeButton.textContent = "X";
-    removeButton.addEventListener("click", () => removeCity(city)); // Add a click event to remove the city
-    removeButtonColumn.appendChild(removeButton);
-
-    // Add the left and right columns to the row
-    newRow.appendChild(cityNameColumn);
-    newRow.appendChild(removeButtonColumn);
-
-    // Add the row to the favoritesList
-    favoritesList.appendChild(newRow);
-}
-
-function removeCity(city) {
-    // Handle the removal of the city from the favoritesArray and update the modal
-    const index = favoritesArray.indexOf(city);
-    if (index !== -1) {
-        favoritesArray.splice(index, 1);
-        localStorage.setItem("favorites", JSON.stringify(favoritesArray)); // Update local storage
-        updateFavoritesModalContent(); // Update the modal content immediately
-    }
-    updateFavoritesIcon();
-}
-
-function updateFavoritesModalContent() {
-    // Clear the existing content before adding the elements
-    favoritesList.innerHTML = "";
-
-    // Loop through the favoritesArray and add each city to the modal
-    for (let i = 0; i < favoritesArray.length; i++) {
-        addElement(favoritesArray[i]);
-    }
-}
