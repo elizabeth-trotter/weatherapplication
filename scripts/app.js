@@ -402,18 +402,18 @@ function showAutocompleteDropdown(cityOptions) {
 }
 
 // Event listener for mouseenter on the autocomplete dropdown
-autocompleteDropdown.addEventListener('mouseenter', () => {
-    // Clear the timeout to prevent hiding
-    clearTimeout(hideDropdownTimeout);
-});
+// autocompleteDropdown.addEventListener('mouseenter', () => {
+
+//     clearTimeout(hideDropdownTimeout);
+// });
 
 // Event listener for mouseleave on the autocomplete dropdown
-autocompleteDropdown.addEventListener('mouseleave', () => {
-    // Set a new timeout to hide the dropdown after 5 seconds
-    hideDropdownTimeout = setTimeout(() => {
-        hideAutocompleteDropdown();
-    }, 1500);
-});
+// autocompleteDropdown.addEventListener('mouseleave', () => {
+
+//     hideDropdownTimeout = setTimeout(() => {
+//         hideAutocompleteDropdown();
+//     }, 1500);
+// });
 
 // Hide the autocomplete dropdown
 function hideAutocompleteDropdown() {
@@ -449,6 +449,48 @@ function updateFavoritesIcon() {
     userSearch.value = "";
 }
 
+//Favorites Navbar
+let favoritesNav = document.getElementById("favoritesNav");
+
+// Create an unordered list
+const ul = document.createElement('ul');
+
+if (favoritesArray.length > 0) {
+    favoritesNav.innerHTML = "";
+
+    // Loop through each favorite city and create divs with city names and delete buttons
+    favoritesArray.forEach(city => {
+        // Create a div for the city
+        const cityDiv = document.createElement('div');
+        cityDiv.textContent = city;
+
+        // Create a delete button
+        const deleteButton = document.createElement('div');
+        // Create an <i> tag and assign a class
+        const deleteIcon = document.createElement('i');
+        deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
+        deleteButton.appendChild(deleteIcon);
+        // Remove default button styling
+        deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
+
+        deleteButton.addEventListener('click', () => removeCity(city));
+
+        // Style the city div and delete button
+        cityDiv.style.display = 'flex'; // Use flex to control the layout
+        cityDiv.style.justifyContent = 'space-between'; // Space between city name and delete button
+
+        // Append the city div and delete button to the container div
+        cityDiv.appendChild(deleteButton);
+
+        // Append the container div to the favorites list
+        favoritesNav.appendChild(cityDiv);
+    });
+
+}
+
+
+
+
 //Create Elements on Open Modal
 let favoritesList = document.getElementById("favoritesList");
 const favoritesModal = document.getElementById('favoritesModal');
@@ -477,6 +519,7 @@ function addElement(city) {
     cityNameColumn.classList.add("col");
     const cityNameContent = document.createTextNode(city);
     cityNameColumn.appendChild(cityNameContent);
+
     cityNameColumn.addEventListener("click", () => {
         $('#favoritesModal').modal('hide'); // Close the modal (jQuery)
 
