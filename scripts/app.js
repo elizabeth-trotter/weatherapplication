@@ -436,6 +436,7 @@ favoritesAddBtn.addEventListener('click', function () {
         localStorage.setItem("favorites", JSON.stringify(favoritesArray));
     }
     updateFavoritesIcon();
+    createFavorites();
 });
 
 function updateFavoritesIcon() {
@@ -452,44 +453,83 @@ function updateFavoritesIcon() {
 //Favorites Navbar
 let favoritesNav = document.getElementById("favoritesNav");
 
-// Create an unordered list
-const ul = document.createElement('ul');
+createFavorites();
 
-if (favoritesArray.length > 0) {
+function createFavorites() {
     favoritesNav.innerHTML = "";
 
-    // Loop through each favorite city and create divs with city names and delete buttons
-    favoritesArray.forEach(city => {
-        // Create a div for the city
-        const cityDiv = document.createElement('div');
-        cityDiv.textContent = city;
+    if (favoritesArray.length > 0) {
+        // Loop through each favorite city and create divs with city names and delete buttons
+        favoritesArray.forEach(city => {
+            // Create a div for the city
+            const cityDiv = document.createElement('div');
+            cityDiv.textContent = city;
+            cityDiv.classList.add('favCities', 'px-3','pb-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
 
-        // Create a delete button
-        const deleteButton = document.createElement('div');
-        // Create an <i> tag and assign a class
-        const deleteIcon = document.createElement('i');
-        deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
-        deleteButton.appendChild(deleteIcon);
-        // Remove default button styling
-        deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
+            if(city === favoritesArray[favoritesArray.length - 1]){
+                cityDiv.classList.remove('border-bottom', 'mb-4', 'pb-4');
+                cityDiv.classList.add('pb-2');
+            }
 
-        deleteButton.addEventListener('click', () => removeCity(city));
+            // Create a delete button
+            const deleteButton = document.createElement('div');
+            // Create an <i> tag and assign a class
+            const deleteIcon = document.createElement('i');
+            deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
+            deleteButton.appendChild(deleteIcon);
+            // Remove default button styling
+            deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
 
-        // Style the city div and delete button
-        cityDiv.style.display = 'flex'; // Use flex to control the layout
-        cityDiv.style.justifyContent = 'space-between'; // Space between city name and delete button
+            deleteButton.addEventListener('click', () => removeFavorite(city));
 
-        // Append the city div and delete button to the container div
-        cityDiv.appendChild(deleteButton);
+            // Style the city div and delete button
+            cityDiv.style.display = 'flex'; // Use flex to control the layout
+            cityDiv.style.justifyContent = 'space-between'; // Space between city name and delete button
 
-        // Append the container div to the favorites list
-        favoritesNav.appendChild(cityDiv);
-    });
+            // Append the city div and delete button to the container div
+            cityDiv.appendChild(deleteButton);
 
+            // Append the container div to the favorites list
+            favoritesNav.appendChild(cityDiv);
+
+        });
+    }else{
+        const placeholderDiv = document.createElement('div');
+        placeholderDiv.classList.add('text-center', 'py-5');
+
+        const textP = document.createElement('p');
+        textP.classList.add('favCities');
+        textP.textContent = "No favorites to show";
+
+        const instructP = document.createElement('p');
+        instructP.classList.add('pt-5', 'pb-2', 'favCities');
+        instructP.textContent = "Add a city by clicking the heart";
+
+        placeholderDiv.appendChild(textP);
+        placeholderDiv.appendChild(instructP);
+
+        favoritesNav.appendChild(placeholderDiv);
+    }
+
+}
+
+function removeFavorite(city) {
+    // Handle the removal of the city from the favoritesArray and update the content
+    const index = favoritesArray.indexOf(city);
+    if (index !== -1) {
+        favoritesArray.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(favoritesArray)); // Update local storage
+        createFavorites(); // Update the content immediately
+    }
+    updateFavoritesIcon();
 }
 
 
 
+
+
+
+//MOBILE ??
 
 //Create Elements on Open Modal
 let favoritesList = document.getElementById("favoritesList");
