@@ -55,6 +55,69 @@ let stateCode = "";
 let countryCode = "US";
 let limit = 5;
 
+let stateAb = {
+    'Alabama': 'AL',
+    'Alaska': 'AK',
+    'American Samoa': 'AS',
+    'Arizona': 'AZ',
+    'Arkansas': 'AR',
+    'Armed Forces Americas': 'AA',
+    'Armed Forces Europe': 'AE',
+    'Armed Forces Pacific': 'AP',
+    'California': 'CA',
+    'Colorado': 'CO',
+    'Connecticut': 'CT',
+    'Delaware': 'DE',
+    'District of Columbia': 'DC',
+    'Florida': 'FL',
+    'Georgia': 'GA',
+    'Guam': 'GU',
+    'Hawaii': 'HI',
+    'Idaho': 'ID',
+    'Illinois': 'IL',
+    'Indiana': 'IN',
+    'Iowa': 'IA',
+    'Kansas': 'KS',
+    'Kentucky': 'KY',
+    'Louisiana': 'LA',
+    'Maine': 'ME',
+    'Marshall Islands': 'MH',
+    'Maryland': 'MD',
+    'Massachusetts': 'MA',
+    'Michigan': 'MI',
+    'Minnesota': 'MN',
+    'Mississippi': 'MS',
+    'Missouri': 'MO',
+    'Montana': 'MT',
+    'Nebraska': 'NE',
+    'Nevada': 'NV',
+    'New Hampshire': 'NH',
+    'New Jersey': 'NJ',
+    'New Mexico': 'NM',
+    'New York': 'NY',
+    'North Carolina': 'NC',
+    'North Dakota': 'ND',
+    'Northern Mariana Islands': 'NP',
+    'Ohio': 'OH',
+    'Oklahoma': 'OK',
+    'Oregon': 'OR',
+    'Pennsylvania': 'PA',
+    'Puerto Rico': 'PR',
+    'Rhode Island': 'RI',
+    'South Carolina': 'SC',
+    'South Dakota': 'SD',
+    'Tennessee': 'TN',
+    'Texas': 'TX',
+    'United States Virgin Islands': 'VI',
+    'Utah': 'UT',
+    'Vermont': 'VT',
+    'Virginia': 'VA',
+    'Washington': 'WA',
+    'West Virginia': 'WV',
+    'Wisconsin': 'WI',
+    'Wyoming': 'WY'
+}
+
 //Geo location is a built in API that allows the user to share their location upon request
 navigator.geolocation.getCurrentPosition(success, errorFunc);
 
@@ -114,7 +177,9 @@ async function reverseGeoAPI() {
     const data = await location.json();
     locationData = data;
 
-    if (locationData[0].state) {
+    if (stateAb[locationData[0].state]) {
+        cityName.innerHTML = locationData[0].name + ", " + stateAb[locationData[0].state];
+    } else if (locationData[0].state) {
         cityName.innerHTML = locationData[0].name + ", " + locationData[0].state;
     } else {
         cityName.innerHTML = locationData[0].name;
@@ -463,7 +528,7 @@ function createFavorites() {
         favoritesArray.forEach(location => {
             // Create a div for the city
             const cityDiv = document.createElement('div');
-            cityDiv.classList.add('favCities', 'px-3', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
+            cityDiv.classList.add('favCities', 'ps-3', 'pe-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
 
             const cityText = document.createElement('p');
             cityText.textContent = location;
@@ -524,6 +589,8 @@ function createFavorites() {
             cityText.addEventListener('click', function () {
                 let locationArr = location.split(", ");
                 userSearch.value = locationArr[0];
+                // let tempCityArr = cityText.textContent.split(", ");
+                locationArr[1] = Object.keys(stateAb).find(key => stateAb[key] === locationArr[1]);
                 stateCode = locationArr[1];
                 success(userSearch.value);
                 updateFavoritesIcon();
