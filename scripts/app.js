@@ -416,12 +416,25 @@ userSearch.addEventListener('input', function () {
 // Fetch geocoding data from the API
 async function fetchGeocodingData(input) {
     // Replace this with your actual geocoding API endpoint and logic
-    const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
-    const data = await promise.json();
+    const promise_1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
+    const data_1 = await promise_1.json();
+    let lat_1, lon_1;
 
+    for (let i = 0; i < data_1.length; i++) {
+
+        lat_1 = data_1[i].lat;
+        lon_1 = data_1[i].lon;
+
+        const promise_2 = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat_1}&lon=${lon_1}&limit=5&appid=${apiKey}`)
+        const data_2 = await promise_2.json();
+
+        if(data_2[0].name.toLowerCase().includes("county")){
+            data_1.splice(i, 1);
+        }
+    }
     // Check if there are multiple city options
-    if (data.length > 1) {
-        showAutocompleteDropdown(data);
+    if (data_1.length > 0) {
+        showAutocompleteDropdown(data_1);
     } else {
         hideAutocompleteDropdown();
     }
@@ -589,7 +602,7 @@ function createFavorites() {
             cityText.addEventListener('click', function () {
                 let locationArr = location.split(", ");
                 userSearch.value = locationArr[0];
-                // let tempCityArr = cityText.textContent.split(", ");
+
                 locationArr[1] = Object.keys(stateAb).find(key => stateAb[key] === locationArr[1]);
                 stateCode = locationArr[1];
                 success(userSearch.value);
