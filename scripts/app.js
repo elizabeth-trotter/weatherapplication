@@ -463,10 +463,11 @@ function createFavorites() {
         favoritesArray.forEach(location => {
             // Create a div for the city
             const cityDiv = document.createElement('div');
-            cityDiv.classList.add('favCities', 'px-3', 'pb-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
+            cityDiv.classList.add('favCities', 'px-3', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
 
             const cityText = document.createElement('p');
             cityText.textContent = location;
+            cityText.classList.add('pb-2');
 
             cityDiv.appendChild(cityText);
             cityText.style.cursor = 'pointer';
@@ -483,8 +484,9 @@ function createFavorites() {
             });
 
             if (location === favoritesArray[favoritesArray.length - 1]) {
-                cityDiv.classList.remove('border-bottom', 'mb-4', 'pb-4');
-                cityDiv.classList.add('pb-2');
+                cityDiv.classList.remove('border-bottom', 'border-light', 'border-opacity-10', 'mb-4');
+                cityText.classList.remove('pb-2');
+                cityText.classList.add('mb-1');
             }
 
             // Create a delete button
