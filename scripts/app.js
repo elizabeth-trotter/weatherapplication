@@ -463,8 +463,24 @@ function createFavorites() {
         favoritesArray.forEach(location => {
             // Create a div for the city
             const cityDiv = document.createElement('div');
-            cityDiv.textContent = location;
             cityDiv.classList.add('favCities', 'px-3', 'pb-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
+
+            const cityText = document.createElement('p');
+            cityText.textContent = location;
+
+            cityDiv.appendChild(cityText);
+            cityText.style.cursor = 'pointer';
+
+            // Add event listeners for hover effects
+            cityText.addEventListener('mouseover', function () {
+                // Change text color when hovering
+                cityText.style.color = '#EDA169'; // Set the desired color
+            });
+
+            cityText.addEventListener('mouseout', function () {
+                // Restore the original text color when not hovering
+                cityText.style.color = ''; // Set to an empty string to use the CSS-defined color
+            });
 
             if (location === favoritesArray[favoritesArray.length - 1]) {
                 cityDiv.classList.remove('border-bottom', 'mb-4', 'pb-4');
@@ -480,6 +496,17 @@ function createFavorites() {
             // Remove default button styling
             deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
 
+            // Add event listeners for hover effects
+            deleteButton.addEventListener('mouseover', function () {
+                // Change text color when hovering
+                deleteButton.style.color = '#EDA169'; // Set the desired color
+            });
+
+            deleteButton.addEventListener('mouseout', function () {
+                // Restore the original text color when not hovering
+                deleteButton.style.color = ''; // Set to an empty string to use the CSS-defined color
+            });
+
             deleteButton.addEventListener('click', () => removeFavorite(location));
 
             // Style the city div and delete button
@@ -492,7 +519,7 @@ function createFavorites() {
             // Append the container div to the favorites list
             favoritesNav.appendChild(cityDiv);
 
-            cityDiv.addEventListener('click', function () {
+            cityText.addEventListener('click', function () {
                 let locationArr = location.split(", ");
                 userSearch.value = locationArr[0];
                 stateCode = locationArr[1];
@@ -507,7 +534,7 @@ function createFavorites() {
 
         const textP = document.createElement('p');
         textP.classList.add('favCities');
-        textP.textContent = "No favorites to show";
+        textP.textContent = "No favorites saved";
 
         const instructP = document.createElement('p');
         instructP.classList.add('pt-5', 'pb-2', 'favCities');

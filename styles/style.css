@@ -93,7 +93,7 @@
 
 /* Favorites */
 .favoritesScroll {
-    max-height: 40rem; /* Maximum height of the dropdown to enable scrolling */
+    max-height: 35rem; /* Maximum height of the dropdown to enable scrolling */
     overflow-y: auto;
 }
 
@@ -111,6 +111,7 @@ hr {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 17px;
+    color: rgba(255, 255, 255, 0.856);
 }
 
 .favCities {
@@ -254,4 +255,39 @@ hr {
 .bgBlueBody {
     background-color: #1D2837;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Scrollbar */
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+/* For Firefox */
+/* Note: Firefox currently does not support styling the scrollbar-thumb */
+/* You can only style the scrollbar-track */
+* {
+    scrollbar-color: #555 #eee;
+    scrollbar-width: thin;
+}
+
+/* For Internet Explorer and Edge */
+/* Note: These browsers use a completely different syntax */
+* {
+    scrollbar-face-color: #555;
+    scrollbar-shadow-color: #eee;
+    scrollbar-highlight-color: #eee;
+    scrollbar-3dlight-color: #eee;
+    scrollbar-darkshadow-color: #555;
+    scrollbar-track-color: #eee;
+    scrollbar-arrow-color: #555;
 }
