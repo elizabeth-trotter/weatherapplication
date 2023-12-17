@@ -45,7 +45,6 @@ let dayFiveHigh = document.getElementById("dayFiveHigh");
 let dayFiveLow = document.getElementById("dayFiveLow");
 
 let favoritesAddBtn = document.getElementById("favoritesAddBtn");
-let favoritesArray = [];
 
 // JavaScript Variables
 let userLat, userLon;
@@ -54,6 +53,8 @@ let todayUnix, todayDateTime, futureDate1, futureDate2, futureDate3, futureDate4
 let stateCode = "";
 let countryCode = "US";
 let limit = 5;
+let favoritesArray = [];
+let recentsArray = [];
 
 let stateAb = {
     'Alabama': 'AL',
@@ -142,6 +143,7 @@ async function success(position) {
     getDates();
     hourlyForecast();
     updateFavoritesIcon();
+    hideAutocompleteDropdown();
 }
 
 //If the user denies we run errorFunc
@@ -384,6 +386,8 @@ userSearch.addEventListener('keypress', function (e) {
         e.preventDefault();
         updateFavoritesIcon();
         userSearch.value = "";
+        updateRecents();
+        createRecents();
         hideAutocompleteDropdown();
         return false;
     }
@@ -392,6 +396,8 @@ searchBtn.addEventListener('click', function () {
     success(userSearch.value);
     updateFavoritesIcon();
     userSearch.value = "";
+    updateRecents();
+    createRecents();
     hideAutocompleteDropdown();
 });
 
@@ -428,7 +434,7 @@ async function fetchGeocodingData(input) {
         const promise_2 = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat_1}&lon=${lon_1}&limit=5&appid=${apiKey}`)
         const data_2 = await promise_2.json();
 
-        if(data_2[0].name.toLowerCase().includes("county")){
+        if (data_2[0].name.toLowerCase().includes("county")) {
             data_1.splice(i, 1);
         }
     }
@@ -460,6 +466,8 @@ function showAutocompleteDropdown(cityOptions) {
                 success(userSearch.value); // Return to the weather application for the chosen city
                 hideAutocompleteDropdown();
                 stateCode = "";
+                updateRecents();
+                createRecents();
             });
 
             autocompleteDropdown.appendChild(option);
@@ -500,6 +508,30 @@ function hideAutocompleteDropdown() {
 }
 
 // Local Storage
+if (localStorage.getItem("recents")) {
+    recentsArray = JSON.parse(localStorage.getItem("recents"))
+};
+
+function updateRecents() {
+    if (recentsArray.includes(cityName.textContent)) {
+        let indexDuplicate = recentsArray.indexOf(cityName.textContent);
+        if (indexDuplicate !== 2) {
+            recentsArray.splice(indexDuplicate, 1);
+            recentsArray.push(cityName.textContent);
+            localStorage.setItem("recents", JSON.stringify(recentsArray));
+        }
+    } else {
+        if (recentsArray.length > 2) {
+            recentsArray.shift();
+            recentsArray.push(cityName.textContent);
+            localStorage.setItem("recents", JSON.stringify(recentsArray));
+        } else {
+            recentsArray.push(cityName.textContent);
+            localStorage.setItem("recents", JSON.stringify(recentsArray));
+        }
+    }
+}
+
 if (localStorage.getItem("favorites")) {
     favoritesArray = JSON.parse(localStorage.getItem("favorites"))
 };
@@ -526,6 +558,113 @@ function updateFavoritesIcon() {
         favoritesAddBtn.classList.add("fa-regular");
     }
     userSearch.value = "";
+}
+
+//Recents Navbar
+let recentsNav = document.getElementById("recentsNav");
+
+createRecents();
+
+function createRecents() {
+    recentsNav.innerHTML = "";
+
+    if (recentsArray.length > 0) {
+        // Loop through each favorite city and create divs with city names and delete buttons
+        recentsArray.forEach(location => {
+            // Create a div for the city
+            const cityDiv = document.createElement('div');
+            cityDiv.classList.add('favCities', 'ps-3', 'pe-4', 'mb-4', 'border-bottom', 'border-light', 'border-opacity-10');
+
+            const cityText = document.createElement('p');
+            cityText.textContent = location;
+            cityText.classList.add('pb-2');
+
+            cityDiv.appendChild(cityText);
+            cityText.style.cursor = 'pointer';
+
+            // Add event listeners for hover effects
+            cityText.addEventListener('mouseover', function () {
+                // Change text color when hovering
+                cityText.style.color = '#EDA169'; // Set the desired color
+            });
+
+            cityText.addEventListener('mouseout', function () {
+                // Restore the original text color when not hovering
+                cityText.style.color = ''; // Set to an empty string to use the CSS-defined color
+            });
+
+            if (location === recentsArray[recentsArray.length - 1]) {
+                cityDiv.classList.remove('border-bottom', 'border-light', 'border-opacity-10', 'mb-4');
+                cityText.classList.remove('pb-2');
+                cityText.classList.add('mb-2');
+            }
+
+            // Create a delete button
+            const deleteButton = document.createElement('div');
+            // Create an <i> tag and assign a class
+            const deleteIcon = document.createElement('i');
+            deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
+            deleteButton.appendChild(deleteIcon);
+            // Remove default button styling
+            deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
+
+            // Add event listeners for hover effects
+            deleteButton.addEventListener('mouseover', function () {
+                // Change text color when hovering
+                deleteButton.style.color = '#EDA169'; // Set the desired color
+            });
+
+            deleteButton.addEventListener('mouseout', function () {
+                // Restore the original text color when not hovering
+                deleteButton.style.color = ''; // Set to an empty string to use the CSS-defined color
+            });
+
+            deleteButton.addEventListener('click', () => removeRecent(location));
+
+            // Style the city div and delete button
+            cityDiv.style.display = 'flex'; // Use flex to control the layout
+            cityDiv.style.justifyContent = 'space-between'; // Space between city name and delete button
+
+            // Append the city div and delete button to the container div
+            cityDiv.appendChild(deleteButton);
+
+            // Append the container div to the favorites list
+            recentsNav.appendChild(cityDiv);
+
+            cityText.addEventListener('click', function () {
+                let locationArr = location.split(", ");
+                userSearch.value = locationArr[0];
+
+                locationArr[1] = Object.keys(stateAb).find(key => stateAb[key] === locationArr[1]);
+                stateCode = locationArr[1];
+                success(userSearch.value);
+                updateFavoritesIcon();
+                hideAutocompleteDropdown();
+            });
+
+        });
+    } else {
+        const placeholderDiv = document.createElement('div');
+        placeholderDiv.classList.add('text-center', 'pb-3');
+
+        const textP = document.createElement('p');
+        textP.classList.add('favCities');
+        textP.textContent = "No recent searches";
+
+        placeholderDiv.appendChild(textP);
+
+        recentsNav.appendChild(placeholderDiv);
+    }
+}
+
+function removeRecent(city) {
+    // Handle the removal of the city from the favoritesArray and update the content
+    const index = recentsArray.indexOf(city);
+    if (index !== -1) {
+        recentsArray.splice(index, 1);
+        localStorage.setItem("recents", JSON.stringify(recentsArray)); // Update local storage
+        createRecents(); // Update the content immediately
+    }
 }
 
 //Favorites Navbar
@@ -607,6 +746,7 @@ function createFavorites() {
                 stateCode = locationArr[1];
                 success(userSearch.value);
                 updateFavoritesIcon();
+                hideAutocompleteDropdown();
             });
 
         });

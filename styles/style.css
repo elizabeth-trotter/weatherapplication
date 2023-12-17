@@ -93,7 +93,7 @@
 
 /* Favorites */
 .favoritesScroll {
-    max-height: 35rem; /* Maximum height of the dropdown to enable scrolling */
+    max-height: 31rem; /* Maximum height of the dropdown to enable scrolling */
     overflow-y: auto;
 }
 
