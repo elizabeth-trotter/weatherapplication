@@ -12,6 +12,8 @@
 **Sprint 2:** 
 - Develop the application (using vanilla JavaScript)
 
+*See below for most recent version history*
+
 
 ## Prototype
 
@@ -19,7 +21,6 @@
 
 [Version 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
 
-***See below for most recent version history***
 ---
 
 ### Development Versions
