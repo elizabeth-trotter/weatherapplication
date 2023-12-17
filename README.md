@@ -17,9 +17,11 @@
 
 ## Prototype
 
-[FINAL - Version 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
+Click [FINAL - Version 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design){:target=”_blank”} 
+to visit the final Figma prototype.
 
-[Version 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
+Click [Version 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design){:target=”_blank”}
+to view the first prototype iteration.
 
 ---
 
@@ -32,7 +34,7 @@
 2. Scrolling added for improved favorite list navigation
 3. Bug fix for recent history duplicates
 
-**Version 2.3 (V.2.2)**
+**Version 2.2 (V.2.2)**
 
 ***Features:***
 1. Autofill dropdown added for improved search functionality
@@ -43,7 +45,7 @@
 6. Bug fix for county search issues
 7. Bug fix for autofill duplicates 
 
-**Version 2.3 (V.2.0)**
+**Version 2.1 (V.2.1)**
 
 ***Features:***
 1. Current weather forecast data
