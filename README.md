@@ -1,4 +1,4 @@
-# Weather Application :sunny:
+# Weather Application ![Weather App Logo](./assets/logo.png)
 
 **Name:** Elizabeth Trotter
 
@@ -6,22 +6,27 @@
 ## Description
 
 **Sprint 1:** 
-- Design a desktop weather application protoype 
-- Create using Figma and OpenWeather API
+- Design a desktop weather application (create using Figma)
+- Flowchart the logic
 
 **Sprint 2:** 
-- Develop the application (using vanilla JavaScript)
+- Develop the application (build using vanilla JavaScript)
 
-*See below for most recent version history*
+Click [here](###development-versions) to scroll down to view the most recent version history. 
 
 
 ## Prototype
 
-Click [FINAL - Version 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design) 
-to visit the final Figma prototype.
+Click [Prototype V 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design) 
+to visit the **final** Figma prototype design.
 
-Click [Version 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
-to view the first prototype iteration.
+Click [Prototype V 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
+to visit the first prototype iteration.
+
+## Flowchart
+CLick [Flowchart](./assets/flowchart/flowchart.png) to view the initial flowchart plan.
+
+![Weather App Logo](./assets/flowchart/flowchart.png)
 
 ---
 
