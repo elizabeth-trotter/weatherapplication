@@ -1,4 +1,4 @@
-# Weather Application ![Weather App Logo](./assets/logo.png)
+# Weather Application ![Weather App Logo](./assets/flowchart/favicon.ico)
 
 **Name:** Elizabeth Trotter
 
@@ -12,7 +12,7 @@
 **Sprint 2:** 
 - Develop the application (build using vanilla JavaScript)
 
-Click [here](###development-versions) to scroll down to view the most recent version history. 
+Click [here](###-development-versions) to scroll down to view the most recent version history. 
 
 
 ## Prototype
@@ -24,7 +24,6 @@ Click [Prototype V 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather
 to visit the first prototype iteration.
 
 ## Flowchart
-CLick [Flowchart](./assets/flowchart/flowchart.png) to view the initial flowchart plan.
 
 ![Weather App Logo](./assets/flowchart/flowchart.png)
 
