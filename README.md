@@ -3,12 +3,14 @@
 **Name:** Elizabeth Trotter
 
 
+<br/>
 ## Description
 
-| Timeline (Sprints) | Description | Tool(s) |
+| Timeline (Sprints) | Description | Tools |
 | --- | --- | --- |
 | Week 1 | 1. Design a desktop weather application prototype 2. Flowchart the logic | `Figma`, `draw.io` | 
-| Week 2 | Develop the application based on prototype | `vanilla JavaScript` |
+| Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
+
 
 > [!NOTE]
 > Click [here](#development-version) to scroll down to the most recent version history. 
@@ -32,6 +34,7 @@ to visit the first prototype iteration.
 
 
 ---
+
 
 ### Development Version
 
