@@ -19,15 +19,19 @@
 ## Prototype
 
 Click [Prototype V 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design) 
-to visit the **final** Figma prototype design.
+to visit the **final Figma prototype design**.
+- *Notable features expanded to include recent search history, todays hourly forecast, & updated favorite functionality.*
 
 Click [Prototype V 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
 to visit the first prototype iteration.
+- *Notable features include five day forcast, current weather temp + condition, favorite storage, & search bar.*
 
 
 ## Flowchart
 
 ![Weather App Logo](./assets/flowchart/flowchart.png)
+*(initial flowchart logic created week 1)*
+
 
 ---
 
