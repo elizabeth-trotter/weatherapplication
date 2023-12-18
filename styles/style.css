@@ -3,6 +3,14 @@
     font-size: 2.5rem;
 }
 
+.largeIconFont {
+    font-size: 6rem !important;
+}
+
+.heartIcon {
+    font-size: 27px;
+}
+
 /* All */
 /* html {
     max-width: 100%;
@@ -183,6 +191,11 @@ hr {
     font-size: 22px;
 }
 
+.conditionText {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+}
+
 .timesText {
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
@@ -291,3 +304,93 @@ hr {
     scrollbar-track-color: #eee;
     scrollbar-arrow-color: #555;
 }
+
+/* Media Queries - Desktop */
+@media screen and (max-width: 1675px) {
+    /* Main temp smaller */
+    .tempText {
+        font-size: 65px;
+    }
+    .largeIconFont {
+        font-size: 5rem !important;
+    }
+}
+
+@media screen and (max-width: 1494px) {
+    /* Main temp smaller */
+    .tempText {
+        font-size: 55px;
+    }
+    .largeIconFont {
+        font-size: 4rem !important;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    /* conition description */
+    .conditionText {
+        font-size: 16px;
+    }
+    .belowCityText {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1382px) {
+    .weatherIconFont {
+        font-size: 1.8rem;
+    }
+    .largeIconFont {
+        font-size: 3.5rem !important;
+    }
+    .heartIcon {
+        font-size: 15px;
+    }
+
+    .favoritesScroll {
+        max-height: 31rem;
+    }
+    .favHeader {
+        font-size: 14px;
+    }   
+    .favCities {
+        font-size: 18px;
+    }
+
+    .bodyTitle {
+        font-size: 2.2rem;
+    }
+    .bodyTitleSmall {
+        font-size: 1rem;
+    }
+
+    .headerText {
+        font-size: 19px;
+    }
+    .headerText2 {
+        font-size: 19px;
+    }
+    
+    .tempText {
+        font-size: 36px;
+    }
+    .belowCityText {
+        font-size: 15px;
+    }
+    .conditionText {
+        font-size: 12px;
+    }
+    .timesText {
+        font-size: 16px;
+    }
+    .todaysTempsHour {
+        font-size: 16px;
+    }
+    .fiveDayText {
+        font-size: 14px;
+    }  
+    .fiveDayTemp {
+        font-size: 15px;
+    }
+}
+

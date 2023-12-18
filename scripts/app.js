@@ -172,6 +172,7 @@ async function currentWeatherAPI() {
     currentHigh.innerHTML = Math.round(currentWeatherData.main.temp_max);
     currentLow.innerHTML = Math.round(currentWeatherData.main.temp_min);
     setIcon(currentWeatherIcon, currentWeatherData.weather[0].main);
+    currentWeatherIcon.classList.remove('weatherIconFont'); 
 }
 
 async function reverseGeoAPI() {
