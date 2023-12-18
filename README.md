@@ -12,8 +12,7 @@
 **Sprint 2:** 
 - Develop the application (build using vanilla JavaScript)
 
-> [!NOTE]
-Click [here](#development-version) to scroll down to the most recent version history. 
+> Click [here](#development-version) to scroll down to the most recent version history. 
 
 
 ## Prototype
