@@ -42,14 +42,14 @@ to visit the first prototype iteration.
 
 ### Development Version
 
-**Version 2.3 (V.2.3)**
+**Version 2.3 (`V.2.3`)**
 
 ***Features:***
 1. Autofill dropdown visiblity increased for easier viewing
 2. Scrolling added for improved favorite list navigation
 3. Bug fix for recent history duplicates
 
-**Version 2.2 (V.2.2)**
+**Version 2.2 (`V.2.2`)**
 
 ***Features:***
 1. Autofill dropdown added for improved search functionality
@@ -60,7 +60,7 @@ to visit the first prototype iteration.
 6. Bug fix for county search issues
 7. Bug fix for autofill duplicates 
 
-**Version 2.1 (V.2.1)**
+**Version 2.1 (`V.2.1`)**
 
 ***Features:***
 1. Current weather forecast data
@@ -75,9 +75,9 @@ to visit the first prototype iteration.
 10. Quick viewing of current weather data
 
 
-### Protoype Versions
+### Protoype Version
 
-**Version 2 (V.2)**
+**Version 2 (`V.2`)**
 
 ***Features:***
 1. Additional weather data units added
@@ -88,7 +88,7 @@ to visit the first prototype iteration.
 6. Logo added
 7. All items available in V.1
 
-**Version 1 (V.1)**
+**Version 1 (`V.1`)**
 
 ***Features:***
 1. Current weather forecast data
