@@ -2,7 +2,7 @@
 
 **Name:** Elizabeth Trotter
 
-**Project Note:** This started off as a school assignment to design & develop our very own weather application. It was the first major project in which I was able to implement my newly learned JavaScript knowledge. I have continued to redesign & refactor the code since then.
+**Project Note:** This started off as a school assignment to design & develop our very own weather application. It was the first major project in which I was able to implement my newly learned JavaScript knowledge. I have continued to improve the design, add additional features, and refactor the code since then.
 
 
 ## Timeline
