@@ -5,12 +5,10 @@
 
 ## Description
 
-**Sprint 1:** 
-- Design a desktop weather application (create using Figma)
-- Flowchart the logic
-
-**Sprint 2:** 
-- Develop the application (build using vanilla JavaScript)
+| Timeline (Sprints) | Description | Tool(s) |
+| --- | --- | --- |
+| Week 1 | 1. Design a desktop weather application prototype 2. Flowchart the logic | `Figma`, `draw.io` | 
+| Week 2 | Develop the application based on prototype | `vanilla JavaScript` |
 
 > [!NOTE]
 > Click [here](#development-version) to scroll down to the most recent version history. 
