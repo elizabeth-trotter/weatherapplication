@@ -2,12 +2,14 @@
 
 **Name:** Elizabeth Trotter
 
+**Project Note:** This started off as a school assignment to design & develop our very own weather application. It was the first major project in which I was able to implement my newly learned JavaScript knowledge. I have continued to redesign & refactor the code since then.
+
 
 ## Timeline
 
 | Sprint | Description | Tools |
 | --- | --- | --- |
-| Week 1 | 1. Design a desktop weather application prototype\ 2. Flowchart the logic | `Figma`, `draw.io` | 
+| Week 1 | 1. Design a desktop weather application prototype 2. Flowchart the logic | `Figma`, `draw.io` | 
 | Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
 
 
