@@ -3,7 +3,6 @@
 **Name:** Elizabeth Trotter
 
 
-<br/>
 ## Description
 
 | Timeline (Sprints) | Description | Tools |
@@ -14,6 +13,9 @@
 
 > [!NOTE]
 > Click [here](#development-version) to scroll down to the most recent version history. 
+
+
+---
 
 
 ## Prototype
