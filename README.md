@@ -12,7 +12,8 @@
 **Sprint 2:** 
 - Develop the application (build using vanilla JavaScript)
 
-Click [here](#development-version) to scroll down to view the most recent version history. 
+> [!NOTE]
+> Click [here](#development-version) to scroll down to the most recent version history. 
 
 
 ## Prototype
@@ -22,6 +23,8 @@ to visit the **final** Figma prototype design.
 
 Click [Prototype V 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
 to visit the first prototype iteration.
+
+<a href="https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design" target="_blank">external link</a>
 
 ## Flowchart
 
