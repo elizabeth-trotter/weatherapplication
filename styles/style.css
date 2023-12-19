@@ -1,4 +1,4 @@
-/* Weather Icons - Conditions */
+/* Icons */
 .weatherIconFont {
     font-size: 2.5rem;
 }
@@ -16,11 +16,6 @@
 }
 
 /* All */
-/* html {
-    max-width: 100%;
-    overflow-x: hidden;
-} */
-
 .backgroundDay {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/daytime.jpg");
     background-repeat: no-repeat;
@@ -77,10 +72,8 @@
 .autocomplete-dropdown {
     color: #000000;
     font-family: 'Oswald', sans-serif;
-    background-color: rgba(255, 255, 255, 0.649);
-    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
-    backdrop-filter: blur(10px);
-    /* Adjust the blur radius as needed */
+    background-color: rgba(255, 255, 255, 0.649); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
     max-height: 200px; /* Maximum height of the dropdown to enable scrolling */
@@ -99,9 +92,7 @@
 .autocomplete-option:hover {
     color: #000000;
     background-color: #FFFFFF;
-    /* background-color: #f0f0f0; */
 }
-
 
 /* Favorites */
 .favoritesScroll {
@@ -112,11 +103,8 @@
 hr {
     border: none;
     height: 2px;
-    /* Set the hr color */
     color: #ffffff;
-    /* old IE */
     background-color: #ffffff;
-    /* Modern Browsers */
 }
 
 .favHeader {
@@ -132,8 +120,7 @@ hr {
     font-size: 21px;
 }
 
-/* Body */
-/* Borders */
+/* Body, Borders */
 .bodyTitle {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
@@ -235,38 +222,11 @@ hr {
     padding-right: 130px;
 }
 
-/* Modal */
-.remove-button {
-    background-color: transparent;
-}
-
-.modal-content {
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Adjust the last parameter (0.9) for transparency */
-}
-
-#favoritesModal {
-    left: 0;
-    /* Position the modal to the left */
-    right: auto;
-    /* Reset the default right positioning */
-}
-
-.modal-dialog {
-    margin-right: auto;
-    /* Center the modal horizontally */
-    margin-left: 0;
-    /* Reset the default left margin */
-}
-
 /* Background */
 .bgTopTransparent {
-    background-color: rgba(34, 31, 31, 0.127);
-    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
-    backdrop-filter: blur(10px);
-    /* Adjust the blur radius as needed */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    /* Apply drop shadow to bottom and right sides */
+    background-color: rgba(34, 31, 31, 0.127); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
 }
 
 .bgBlueBody {
@@ -274,9 +234,8 @@ hr {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* 7 Day */
+/* 5 Day */
 .forecast-container {
-/* Set the width of the container to 100% */
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent wrapping to the next line */
 }
@@ -287,12 +246,12 @@ hr {
 
 .forecast-scroll-container {
     display: flex;
-    align-items: center; /* Vertical centering */
+    align-items: center;
     white-space: nowrap;
     overflow-x: auto;
 }
 
-/* Optional: If want to set a fixed width for each day element */
+/* Fixed width for each day element */
 .forecast-scroll-container > .col {
     flex: 0 0 20%; /* Adjust the percentage as needed */
     box-sizing: border-box; /* Include padding and border in the width calculation */
@@ -310,7 +269,7 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #737373; /* Change color on hover */
+    background-color: #737373;
 }
 
 ::-webkit-scrollbar-track {
@@ -529,7 +488,7 @@ hr {
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 653px) {
     .pe-5,
     .ps-5,
     .mx-5,

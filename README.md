@@ -49,11 +49,10 @@ to visit the first prototype iteration.
 1. Autofill dropdown visiblity increased
 2. Scrolling added for improved long favorite list navigation
 3. Accuracy added for future forecast weather condition icons
-4. 7 day forecast added (previously 5 day)
-5. Horizontally scrolling added for easy 7 day navigation
-6. Responsiveness updated for larger desktop screen sizes
-7. Responsive for tablet & mobile added
-8. Bug fix for recent history duplicates
+4. Horizontally scrolling added for easy 5 day navigation on smaller screens
+5. Responsiveness updated for larger desktop screen sizes
+6. Responsive for tablet & mobile added
+7. Bug fix for recent history duplicates
 
 **Version 2.2 (`V.2.2`)**
 

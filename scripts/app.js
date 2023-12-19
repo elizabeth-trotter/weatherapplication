@@ -262,15 +262,6 @@ function updateDateTime() {
 
     // update the `innerHTML` property of the element with the `id` of `time`
     document.querySelector("#time").innerHTML = currentDateTime;
-
-    // document.querySelector("body").className = "";
-    // document.querySelector("body").classList.add("backgroundDay");
-
-    //Check time for background
-    // if(currentDateTime.getHours() > 7 && currentDateTime.getHours() < 20){
-    //     document.querySelector("body").className = "";
-    //     document.querySelector("body").classList.add("backgroundDay");
-    // }
 }
 
 // call the `updateDateTime` function every second
@@ -374,8 +365,7 @@ function hourlyForecast() {
     setIcon(afternoonIcon, afternoonCondition);
     afternoonTemp.innerHTML = Math.round(afternoonTempsAverage);
 
-    // setIcon(nightIcon, nightCondition);
-    // nightIcon.classList.add("fa-solid fa-moon");
+    // Night icon is always set to moon
     nightTemp.innerHTML = Math.round(nightTempsAverage);
 
     // 5 Day Forcast Set (Calculate Highest & Lowest)
@@ -442,7 +432,6 @@ userSearch.addEventListener('input', function () {
 
 // Fetch geocoding data from the API
 async function fetchGeocodingData(input) {
-    // Replace this with your actual geocoding API endpoint and logic
     const promise_1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
     const data_1 = await promise_1.json();
     let lat_1, lon_1;
@@ -498,29 +487,7 @@ function showAutocompleteDropdown(cityOptions) {
     }
 
     autocompleteDropdown.style.display = 'block';
-
-    //  // Clear previous timeout (if any)
-    //  clearTimeout(hideDropdownTimeout);
-
-    //  // Set a new timeout to hide the dropdown after 5 seconds
-    //  hideDropdownTimeout = setTimeout(() => {
-    //      hideAutocompleteDropdown();
-    //  }, 5000);
 }
-
-// Event listener for mouseenter on the autocomplete dropdown
-// autocompleteDropdown.addEventListener('mouseenter', () => {
-
-//     clearTimeout(hideDropdownTimeout);
-// });
-
-// Event listener for mouseleave on the autocomplete dropdown
-// autocompleteDropdown.addEventListener('mouseleave', () => {
-
-//     hideDropdownTimeout = setTimeout(() => {
-//         hideAutocompleteDropdown();
-//     }, 1500);
-// });
 
 // Hide the autocomplete dropdown
 function hideAutocompleteDropdown() {
@@ -606,7 +573,7 @@ function createRecents() {
             // Add event listeners for hover effects
             cityText.addEventListener('mouseover', function () {
                 // Change text color when hovering
-                cityText.style.color = '#EDA169'; // Set the desired color
+                cityText.style.color = '#EDA169';
             });
 
             cityText.addEventListener('mouseout', function () {
@@ -624,7 +591,7 @@ function createRecents() {
             const deleteButton = document.createElement('div');
             // Create an <i> tag and assign a class
             const deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
+            deleteIcon.classList.add('fa-solid', 'fa-circle-minus');
             deleteButton.appendChild(deleteIcon);
             // Remove default button styling
             deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
@@ -632,7 +599,7 @@ function createRecents() {
             // Add event listeners for hover effects
             deleteButton.addEventListener('mouseover', function () {
                 // Change text color when hovering
-                deleteButton.style.color = '#EDA169'; // Set the desired color
+                deleteButton.style.color = '#EDA169';
             });
 
             deleteButton.addEventListener('mouseout', function () {
@@ -713,7 +680,7 @@ function createFavorites() {
             // Add event listeners for hover effects
             cityText.addEventListener('mouseover', function () {
                 // Change text color when hovering
-                cityText.style.color = '#EDA169'; // Set the desired color
+                cityText.style.color = '#EDA169';
             });
 
             cityText.addEventListener('mouseout', function () {
@@ -731,7 +698,7 @@ function createFavorites() {
             const deleteButton = document.createElement('div');
             // Create an <i> tag and assign a class
             const deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('fa-solid', 'fa-circle-minus'); // Assuming you are using Font Awesome for trash icon
+            deleteIcon.classList.add('fa-solid', 'fa-circle-minus');
             deleteButton.appendChild(deleteIcon);
             // Remove default button styling
             deleteButton.style.cursor = 'pointer'; // Change cursor to indicate it's clickable
@@ -739,7 +706,7 @@ function createFavorites() {
             // Add event listeners for hover effects
             deleteButton.addEventListener('mouseover', function () {
                 // Change text color when hovering
-                deleteButton.style.color = '#EDA169'; // Set the desired color
+                deleteButton.style.color = '#EDA169';
             });
 
             deleteButton.addEventListener('mouseout', function () {
@@ -801,8 +768,4 @@ function removeFavorite(city) {
     }
     updateFavoritesIcon();
 }
-
-
-
-
 
