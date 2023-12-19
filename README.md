@@ -42,6 +42,13 @@ to visit the first prototype iteration.
 
 ### Development Version
 
+**Version 2.4 (`V.2.4`)**
+
+***Features:***
+
+1. Toggle option added for temperature unit change
+2. Rensponsiveness fix for some desktop screen sizes
+
 **Version 2.3 (`V.2.3`)**
 
 ***Features:***
@@ -51,7 +58,7 @@ to visit the first prototype iteration.
 3. Accuracy added for future forecast weather condition icons
 4. Horizontally scrolling added for easy 5 day navigation on smaller screens
 5. Responsiveness updated for larger desktop screen sizes
-6. Responsive for tablet & mobile added
+6. Responsiveness addition for tablet & mobile
 7. Bug fix for recent history duplicates
 
 **Version 2.2 (`V.2.2`)**

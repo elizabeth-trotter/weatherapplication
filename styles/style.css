@@ -37,6 +37,31 @@
     background-color: #1D2837;
 }
 
+/* Temperature Unit Toggle */
+.btnText {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+}
+
+.btn-group label.btn {
+    color: #ffffff;
+    /* Change to your desired text color */
+    border-color: #2083B7;
+    /* Change to your desired border color */
+}
+
+.btn-group label.btn:hover {
+  background-color: #EDA169; /* Change to your desired background color */
+  color: #ffffff; /* Change to your desired text color */
+  border-color: #2083B7; /* Change to your desired border color */
+}
+
+.btn-group input:checked + label.btn {
+    background-color: #2083B7 !important; /* Change to your desired active background color */
+    color: #ffffff !important; /* Change to your desired active text color */
+    border-color: #2083B7 !important; /* Change to your desired active border color */
+  }
+
 /* Search */
 .search-container {
     display: flex;
@@ -72,21 +97,31 @@
 .autocomplete-dropdown {
     color: #000000;
     font-family: 'Oswald', sans-serif;
-    background-color: rgba(255, 255, 255, 0.649); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    background-color: rgba(255, 255, 255, 0.649);
+    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur radius as needed */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
-    max-height: 200px; /* Maximum height of the dropdown to enable scrolling */
-    overflow-y: auto; /* Enable vertical scrolling if the content overflows */
-    max-width: 100%; /* Set a maximum width for the dropdown */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a subtle lift effect */
+    max-height: 200px;
+    /* Maximum height of the dropdown to enable scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling if the content overflows */
+    max-width: 100%;
+    /* Set a maximum width for the dropdown */
     position: absolute;
-    z-index: 1; /* Ensure the dropdown appears above other elements */
+    z-index: 1;
+    /* Ensure the dropdown appears above other elements */
 }
 
 .autocomplete-option {
-    padding: 8px 16px; /* Padding around each option */
-    cursor: pointer; /* Change cursor to a pointer on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color change */
+    padding: 8px 16px;
+    /* Padding around each option */
+    cursor: pointer;
+    /* Change cursor to a pointer on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition for background color change */
 }
 
 .autocomplete-option:hover {
@@ -96,7 +131,8 @@
 
 /* Favorites */
 .favoritesScroll {
-    max-height: 31rem; /* Maximum height of the dropdown to enable scrolling */
+    max-height: 31rem;
+    /* Maximum height of the dropdown to enable scrolling */
     overflow-y: auto;
 }
 
@@ -224,9 +260,12 @@ hr {
 
 /* Background */
 .bgTopTransparent {
-    background-color: rgba(34, 31, 31, 0.127); /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
-    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Apply drop shadow to bottom and right sides */
+    background-color: rgba(34, 31, 31, 0.127);
+    /* Adjust the alpha value for transparency (0 is fully transparent, 1 is fully opaque) */
+    backdrop-filter: blur(10px);
+    /* Adjust the blur radius as needed */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    /* Apply drop shadow to bottom and right sides */
 }
 
 .bgBlueBody {
@@ -236,8 +275,10 @@ hr {
 
 /* 5 Day */
 .forecast-container {
-    overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    white-space: nowrap;
+    /* Prevent wrapping to the next line */
 }
 
 .header7Day {
@@ -252,9 +293,11 @@ hr {
 }
 
 /* Fixed width for each day element */
-.forecast-scroll-container > .col {
-    flex: 0 0 20%; /* Adjust the percentage as needed */
-    box-sizing: border-box; /* Include padding and border in the width calculation */
+.forecast-scroll-container>.col {
+    flex: 0 0 20%;
+    /* Adjust the percentage as needed */
+    box-sizing: border-box;
+    /* Include padding and border in the width calculation */
 }
 
 /* Scrollbar */
@@ -299,8 +342,9 @@ hr {
 /* Media Queries */
 @media screen and (max-width: 1675px) {
     .tempText {
-        font-size: 65px;
+        font-size: 64px;
     }
+
     .largeIconFont {
         font-size: 5rem !important;
     }
@@ -310,6 +354,7 @@ hr {
     .tempText {
         font-size: 55px;
     }
+
     .largeIconFont {
         font-size: 4rem !important;
     }
@@ -319,6 +364,7 @@ hr {
     .conditionText {
         font-size: 16px;
     }
+
     .belowCityText {
         font-size: 18px;
     }
@@ -328,9 +374,11 @@ hr {
     .weatherIconFont {
         font-size: 1.8rem;
     }
+
     .largeIconFont {
         font-size: 3.5rem !important;
     }
+
     .heartIcon {
         font-size: 15px;
     }
@@ -338,9 +386,11 @@ hr {
     .favoritesScroll {
         max-height: 31rem;
     }
+
     .favHeader {
         font-size: 14px;
-    }   
+    }
+
     .favCities {
         font-size: 16px;
     }
@@ -348,6 +398,7 @@ hr {
     .bodyTitle {
         font-size: 2.2rem;
     }
+
     .bodyTitleSmall {
         font-size: 1rem;
     }
@@ -355,35 +406,42 @@ hr {
     .headerText {
         font-size: 19px;
     }
+
     .headerText2 {
         font-size: 19px;
     }
-    
+
     .tempText {
         font-size: 36px;
     }
+
     .belowCityText {
         font-size: 15px;
     }
+
     .conditionText {
         font-size: 12px;
     }
+
     .timesText {
         font-size: 16px;
     }
+
     .todaysTempsHour {
         font-size: 16px;
     }
+
     .fiveDayText {
         font-size: 14px;
-    }  
+    }
+
     .fiveDayTemp {
         font-size: 15px;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    .paddingFav{
+    .paddingFav {
         width: 77%;
         margin-left: 7.5rem;
         border-radius: 8px;
@@ -391,17 +449,20 @@ hr {
 }
 
 @media screen and (max-width: 895px) {
-    .paddingFav{
+    .paddingFav {
         width: 70%;
         margin-left: 7.5rem;
         border-radius: 8px;
     }
+
     .weatherIconFont {
         font-size: 1.2rem;
     }
+
     .largeIconFont {
         font-size: 2.2rem !important;
     }
+
     .heartIcon {
         font-size: 12px;
     }
@@ -409,9 +470,11 @@ hr {
     .favoritesScroll {
         max-height: 20rem;
     }
+
     .favHeader {
         font-size: 12px;
-    }   
+    }
+
     .favCities {
         font-size: 14px;
     }
@@ -419,6 +482,7 @@ hr {
     .bodyTitle {
         font-size: 2rem;
     }
+
     .bodyTitleSmall {
         font-size: 1rem;
     }
@@ -426,45 +490,55 @@ hr {
     .headerText {
         font-size: 16px;
     }
+
     .headerText2 {
         font-size: 16px;
     }
-    
+
     .tempText {
         font-size: 23px;
     }
+
     .belowCityText {
         font-size: 12px;
     }
+
     .conditionText {
         font-size: 12px;
     }
+
     .timesText {
         font-size: 14px;
     }
+
     .todaysTempsHour {
         font-size: 14px;
     }
+
     .fiveDayText {
         font-size: 11px;
-    }  
+    }
+
     .fiveDayTemp {
         font-size: 12px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .paddingFav{
+    .paddingFav {
         width: 100%;
         border-radius: 0px;
         margin-left: 0px;
     }
+
     .weatherIconFont {
         font-size: 1rem;
     }
+
     .largeIconFont {
         font-size: 2rem !important;
     }
+
     .heartIcon {
         margin-right: -20px;
     }
@@ -475,13 +549,14 @@ hr {
         margin-top: -30px;
         margin-left: -10px;
     }
+
     .bodyTitleSmall {
         font-size: .9rem;
         text-align: center;
         margin-bottom: -10px;
         margin-left: -10px;
     }
-    
+
     .tempText {
         font-size: 14px;
         margin-right: -50px;
@@ -489,6 +564,7 @@ hr {
 }
 
 @media screen and (max-width: 653px) {
+
     .pe-5,
     .ps-5,
     .mx-5,
@@ -498,11 +574,13 @@ hr {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-    .mobileW100{
+
+    .mobileW100 {
         width: 100% !important;
         margin: 0 0 0 0 !important;
     }
-    .paddingFav{
+
+    .paddingFav {
         width: 100%;
         border-radius: 8px;
         margin-top: -70px;
@@ -511,10 +589,12 @@ hr {
     .weatherIconFont {
         font-size: 1.2rem;
     }
+
     .largeIconFont {
         font-size: 2.2rem !important;
         padding-left: 20px;
     }
+
     .heartIcon {
         text-align: start;
         padding-bottom: 10px;
@@ -524,17 +604,20 @@ hr {
         font-size: 14px;
         margin-left: -20px;
     }
+
     .headerText2 {
         font-size: 14px;
     }
-    
+
     .tempText {
         font-size: 23px;
         padding-left: 35px;
     }
+
     .conditionText {
         margin-left: -20px;
     }
+
     .timesText {
         margin-top: -15px;
     }
@@ -544,6 +627,7 @@ hr {
     .timesText {
         font-size: 11px;
     }
+
     .todaysTempsHour {
         font-size: 11px;
     }

@@ -16,7 +16,6 @@ let morningIcon = document.getElementById("morningIcon");
 let morningTemp = document.getElementById("morningTemp");
 let afternoonIcon = document.getElementById("afternoonIcon");
 let afternoonTemp = document.getElementById("afternoonTemp");
-let nightIcon = document.getElementById("nightIcon");
 let nightTemp = document.getElementById("nightTemp");
 
 let dateDayOne = document.getElementById("dateDayOne");
@@ -46,6 +45,11 @@ let dayFiveLow = document.getElementById("dayFiveLow");
 
 let favoritesAddBtn = document.getElementById("favoritesAddBtn");
 
+let tempUnit1 = document.getElementById("tempUnit1");
+let tempUnit2 = document.getElementById("tempUnit2");
+let tempUnit3 = document.getElementById("tempUnit3");
+let tempUnit4 = document.getElementById("tempUnit4");
+
 // JavaScript Variables
 let userLat, userLon;
 let currentWeatherData, locationData, hourlyWeatherData;
@@ -53,6 +57,7 @@ let todayUnix, todayDateTime, futureDate1, futureDate2, futureDate3, futureDate4
 let stateCode = "";
 let countryCode = "US";
 let limit = 5;
+let units = "imperial";
 let favoritesArray = [];
 let recentsArray = [];
 
@@ -163,7 +168,7 @@ async function errorFunc(error) {
 
 //async function allows us to use the key word await, it pauses the execution of the code until the promise is fufilled
 async function currentWeatherAPI() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLon}&appid=${apiKey}&units=imperial`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${userLat}&lon=${userLon}&appid=${apiKey}&units=${units}`);
     const data = await promise.json();
     currentWeatherData = data;
 
@@ -190,7 +195,7 @@ async function reverseGeoAPI() {
 }
 
 async function hourlyWeatherAPI() {
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${userLat}&lon=${userLon}&appid=${apiKey}&units=imperial`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${userLat}&lon=${userLon}&appid=${apiKey}&units=${units}`);
     const data = await promise.json();
     hourlyWeatherData = data;
 }
@@ -769,3 +774,37 @@ function removeFavorite(city) {
     updateFavoritesIcon();
 }
 
+// Temperature Change Radio Buttons
+
+// Function to handle radio button click event
+function handleRadioClick(event) {
+    // Check which radio button is clicked
+    if (event.target.id === 'btnradio1') {
+        units = 'imperial';
+        tempUnit1.textContent = 'F';
+        tempUnit2.textContent = 'F';
+        tempUnit3.textContent = 'F';
+        tempUnit4.textContent = 'F';
+    } else if (event.target.id === 'btnradio2') {
+        units = 'metric';
+        tempUnit1.textContent = 'C';
+        tempUnit2.textContent = 'C';
+        tempUnit3.textContent = 'C';
+        tempUnit4.textContent = 'C';
+    }
+
+    let locationArr = cityName.innerText.split(", ");
+    userSearch.value = locationArr[0];
+
+    locationArr[1] = Object.keys(stateAb).find(key => stateAb[key] === locationArr[1]);
+    stateCode = locationArr[1];
+    success(userSearch.value);
+    updateFavoritesIcon();
+    hideAutocompleteDropdown();
+}
+
+// Add click event listeners to radio buttons
+const radioButtons = document.querySelectorAll('.btn-check');
+radioButtons.forEach(button => {
+    button.addEventListener('click', handleRadioClick);
+});
