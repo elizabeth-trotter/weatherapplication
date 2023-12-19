@@ -16,26 +16,10 @@
 </head>
 
 <body class="backgroundDay">
-    <!-- Navbar -->
-    <!-- <nav class="navbar bgBlue">
-        <div class="container">
-            <a class="navbar-brand navTitle pb-0 "><img src="./assets/logo.png" alt="weather logo"
-                    style="height: 60px;"></a>
-            <form class="d-flex search-form" role="search">
-                <div class="search-container">
-                    <input id="userSearch" class="form-control me-2 searchBox" type="text"
-                        placeholder="Search for a City" aria-label="Search">
-                    <button id="searchBtn" class="btn searchBtn" type="button"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-            </form>
-        </div>
-    </nav> -->
-    <!-- Navbar End -->
 
     <!-- Right Favorites Start -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row mobileW100">
 
             <!-- Clear Left -->
             <div class="col mx-5 mb-5">
@@ -54,13 +38,13 @@
                 <!-- Main -->
                 <div class="row mt-5 pt-3 mx-5 d-flex justify-content-center">
                     <!-- WEATHER UNITS -->
-                    <div class="col ms-2">
-                        <div class="row">
+                    <div class="col ms-2 mobileW100">
+                        <div class="row ">
                             <!-- CURRENT -->
                             <div class="col bgTopTransparent borderRadius">
                                 <div class="row bgBlue borderRadiusCity ps-4 pt-4 pb-3 align-items-center">
                                     <div class="col-9">
-                                        <h4 id="cityName" class="headerText">City</h4>
+                                        <h4 id="cityName" class="headerText mobileCityPadding">City</h4>
                                     </div>
                                     <div class="col text-end pe-5">
                                         <div class="heartIcon"><i id="favoritesAddBtn" class="fa-regular fa-heart"></i>
@@ -159,29 +143,13 @@
                                             class="spacing5day"> </span>L: <span id="dayFiveLow">00</span> °</p>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-                <!-- 2nd Row End -->
-
-                <!-- <div id="favoritesBtn" class=" container pt-4 d-flex justify-content-center" data-bs-toggle="modal"
-                    data-bs-target="#favoritesModal">
-                    <p
-                        class="my-0 text-center d-flex align-items-center favoritesBtnS bgTopTransparent RobotoRegularFont">
-                        <span class="heart-text sp-icon-open"><i class="fa-solid fa-heart"></i>
-                            Open Your
-                            Favorite Places
-                    </p>
-                </div> -->
-                <!-- 3rd Row End -->
-                <!-- Main End -->
-
             </div>
 
             <!-- Blue Right -->
-            <div class="col-3 bgBlue">
+            <div class="col-xl-3 bgBlue paddingFav">
                 <div class="container pt-4">
                     <div class="row pt-2 d-flex justify-content-end pe-3">
                         <img src="./assets/logo.png" alt="weather app logo" style="width: 25%;">
@@ -200,20 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col pt-5">
-                        <div class="row px-3" style="width: 100%;">
-                            <form class="d-flex search-form" role="search">
-                                <div class="search-container">
-                                    <input id="userSearch" class="form-control me-2 searchBox" type="text"
-                                        placeholder="Search for a City" aria-label="Search">
-                                    <button id="searchBtn" class="btn searchBtn" type="button"><i
-                                            class="fa-solid fa-magnifying-glass"></i></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div> -->
+
                 <!-- FAVORITES -->
                 <div class="row pt-2">
                     <div class="col pt-1 px-5">
@@ -233,29 +188,13 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
 
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="favoritesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5 headerText2" id="exampleModalLabel">Your Favorite Cities</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="timesText" id="favoritesList"></div>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 
 
-    <!-- Include jQuery -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

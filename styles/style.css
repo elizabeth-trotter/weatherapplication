@@ -305,9 +305,8 @@ hr {
     scrollbar-arrow-color: #555;
 }
 
-/* Media Queries - Desktop */
+/* Media Queries */
 @media screen and (max-width: 1675px) {
-    /* Main temp smaller */
     .tempText {
         font-size: 65px;
     }
@@ -317,7 +316,6 @@ hr {
 }
 
 @media screen and (max-width: 1494px) {
-    /* Main temp smaller */
     .tempText {
         font-size: 55px;
     }
@@ -327,7 +325,6 @@ hr {
 }
 
 @media screen and (max-width: 1490px) {
-    /* conition description */
     .conditionText {
         font-size: 16px;
     }
@@ -394,3 +391,169 @@ hr {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .paddingFav{
+        width: 77%;
+        margin-left: 7.5rem;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 895px) {
+    .paddingFav{
+        width: 70%;
+        margin-left: 7.5rem;
+        border-radius: 8px;
+    }
+    .weatherIconFont {
+        font-size: 1.2rem;
+    }
+    .largeIconFont {
+        font-size: 2.2rem !important;
+    }
+    .heartIcon {
+        font-size: 12px;
+    }
+
+    .favoritesScroll {
+        max-height: 20rem;
+    }
+    .favHeader {
+        font-size: 12px;
+    }   
+    .favCities {
+        font-size: 14px;
+    }
+
+    .bodyTitle {
+        font-size: 2rem;
+    }
+    .bodyTitleSmall {
+        font-size: 1rem;
+    }
+
+    .headerText {
+        font-size: 16px;
+    }
+    .headerText2 {
+        font-size: 16px;
+    }
+    
+    .tempText {
+        font-size: 23px;
+    }
+    .belowCityText {
+        font-size: 12px;
+    }
+    .conditionText {
+        font-size: 12px;
+    }
+    .timesText {
+        font-size: 14px;
+    }
+    .todaysTempsHour {
+        font-size: 14px;
+    }
+    .fiveDayText {
+        font-size: 11px;
+    }  
+    .fiveDayTemp {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .paddingFav{
+        width: 100%;
+        border-radius: 0px;
+        margin-left: 0px;
+    }
+    .weatherIconFont {
+        font-size: 1rem;
+    }
+    .largeIconFont {
+        font-size: 2rem !important;
+    }
+    .heartIcon {
+        margin-right: -20px;
+    }
+
+    .bodyTitle {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-top: -30px;
+        margin-left: -10px;
+    }
+    .bodyTitleSmall {
+        font-size: .9rem;
+        text-align: center;
+        margin-bottom: -10px;
+        margin-left: -10px;
+    }
+    
+    .tempText {
+        font-size: 14px;
+        margin-right: -50px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .pe-5,
+    .ps-5,
+    .mx-5,
+    .mb-5 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .mobileW100{
+        width: 100% !important;
+        margin: 0 0 0 0 !important;
+    }
+    .paddingFav{
+        width: 100%;
+        border-radius: 8px;
+        margin-top: -70px;
+    }
+
+    .weatherIconFont {
+        font-size: 1.2rem;
+    }
+    .largeIconFont {
+        font-size: 2.2rem !important;
+        padding-left: 20px;
+    }
+    .heartIcon {
+        text-align: start;
+        padding-bottom: 10px;
+    }
+
+    .headerText {
+        font-size: 14px;
+        margin-left: -20px;
+    }
+    .headerText2 {
+        font-size: 14px;
+    }
+    
+    .tempText {
+        font-size: 23px;
+        padding-left: 35px;
+    }
+    .conditionText {
+        margin-left: -20px;
+    }
+    .timesText {
+        margin-top: -15px;
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .timesText {
+        font-size: 11px;
+    }
+    .todaysTempsHour {
+        font-size: 11px;
+    }
+}
