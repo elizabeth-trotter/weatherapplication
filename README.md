@@ -2,7 +2,7 @@
 
 **Name:** Elizabeth Trotter
 
-**Project Note:** This started off as a school assignment to design & develop our very own weather application. It was the first major project in which I was able to implement my newly learned JavaScript knowledge. I have continued to improve the design, add additional features, and refactor the code since then.
+**Project Note:** This started off as a school assignment to design & develop our very own weather application. It was the first major project in which I was able to implement my newly acquired JavaScript knowledge. I have continued to improve the design, add additional features, and refactor the code since then. It was a desktop first design, but responsiveness for tablet & mobile was added later.
 
 
 ## Timeline
@@ -45,9 +45,15 @@ to visit the first prototype iteration.
 **Version 2.3 (`V.2.3`)**
 
 ***Features:***
-1. Autofill dropdown visiblity increased for easier viewing
-2. Scrolling added for improved favorite list navigation
-3. Bug fix for recent history duplicates
+
+1. Autofill dropdown visiblity increased
+2. Scrolling added for improved long favorite list navigation
+3. Accuracy added for future forecast weather condition icons
+4. 7 day forecast added (previously 5 day)
+5. Horizontally scrolling added for easy 7 day navigation
+6. Responsiveness updated for larger desktop screen sizes
+7. Responsive for tablet & mobile added
+8. Bug fix for recent history duplicates
 
 **Version 2.2 (`V.2.2`)**
 

@@ -172,7 +172,7 @@ async function currentWeatherAPI() {
     currentHigh.innerHTML = Math.round(currentWeatherData.main.temp_max);
     currentLow.innerHTML = Math.round(currentWeatherData.main.temp_min);
     setIcon(currentWeatherIcon, currentWeatherData.weather[0].main);
-    currentWeatherIcon.classList.remove('weatherIconFont'); 
+    currentWeatherIcon.classList.remove('weatherIconFont');
 }
 
 async function reverseGeoAPI() {
@@ -230,6 +230,26 @@ function setIcon(element, weather) {
             element.classList.add("fa-solid", "fa-smog");
             break;
     }
+}
+
+function frequentCondition(arr) {
+    let count = 1,
+        max = 0,
+        el;
+
+    for (let i = 1; i < arr.length; ++i) {
+        if (arr[i] === arr[i - 1]) {
+            count++;
+        } else {
+            count = 1;
+        }
+        if (count > max) {
+            max = count;
+            el = arr[i];
+        }
+    }
+
+    return el;
 }
 
 // create a function to update the time
@@ -359,23 +379,23 @@ function hourlyForecast() {
     nightTemp.innerHTML = Math.round(nightTempsAverage);
 
     // 5 Day Forcast Set (Calculate Highest & Lowest)
-    setIcon(dayOneIcon, weatherDay1[0]);
+    setIcon(dayOneIcon, frequentCondition(weatherDay1));
     dayOneHigh.innerHTML = Math.round(Math.max(...highDay1));
     dayOneLow.innerHTML = Math.round(Math.min(...lowDay1));
 
-    setIcon(dayTwoIcon, weatherDay2[0]);
+    setIcon(dayTwoIcon, frequentCondition(weatherDay2));
     dayTwoHigh.innerHTML = Math.round(Math.max(...highDay2));
     dayTwoLow.innerHTML = Math.round(Math.min(...lowDay2));
 
-    setIcon(dayThreeIcon, weatherDay3[0]);
+    setIcon(dayThreeIcon, frequentCondition(weatherDay3));
     dayThreeHigh.innerHTML = Math.round(Math.max(...highDay3));
     dayThreeLow.innerHTML = Math.round(Math.min(...lowDay3));
 
-    setIcon(dayFourIcon, weatherDay4[0]);
+    setIcon(dayFourIcon, frequentCondition(weatherDay4));
     dayFourHigh.innerHTML = Math.round(Math.max(...highDay4));
     dayFourLow.innerHTML = Math.round(Math.min(...lowDay4));
 
-    setIcon(dayFiveIcon, weatherDay5[0]);
+    setIcon(dayFiveIcon, frequentCondition(weatherDay5));
     dayFiveHigh.innerHTML = Math.round(Math.max(...highDay5));
     dayFiveLow.innerHTML = Math.round(Math.min(...lowDay5));
 }
