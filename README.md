@@ -47,7 +47,7 @@ to visit the first prototype iteration.
 ***Features:***
 
 1. Toggle option added for temperature unit change
-2. Rensponsiveness fix for some desktop screen sizes
+2. Responsiveness fix for some desktop screen sizes
 
 **Version 2.3 (`V.2.3`)**
 
