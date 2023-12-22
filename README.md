@@ -5,7 +5,7 @@
 > **Project Note:** This started off as a school assignment to design & develop our very own weather application by fetching data from `OpenWeatherAPI`. It was the `first major project` in which I was able to implement my newly acquired JavaScript knowledge. I have continued to `refactor the code`, improve the design, and add additional features since then. This was a `desktop first design`, and responsiveness for secondary screen sizes was added later.
 
 
-## Timeline
+## Timeline (Initial)
 
 | Sprint | Description | Tools |
 | --- | --- | --- |
@@ -14,8 +14,8 @@
 
 
 > [!NOTE]
-> *The above table was created pre-week 1 as an initial project timeline.*
-> Click [here](#development-version) to scroll down to the most recent version history. 
+> 
+> Click [here](#development-version) to scroll down to the **most recent version history**. 
 
 
 ---
