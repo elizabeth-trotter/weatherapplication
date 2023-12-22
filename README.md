@@ -11,9 +11,8 @@
 | --- | --- | --- |
 | Week 1 | 1. Design a desktop weather application prototype <br/> 2. Flowchart the logic | `Figma`, `draw.io` | 
 | Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
+| *(initial project timeline created pre-week 1)* |
 
-*(initial project timeline created pre-week 1)*
-<br/>
 
 > [!NOTE]
 > Click [here](#development-version) to scroll down to the most recent version history. 
