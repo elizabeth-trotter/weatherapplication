@@ -13,7 +13,7 @@
 | Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
 
 *(initial project timeline created pre-week 1)*
-
+<br/>
 
 > [!NOTE]
 > Click [here](#development-version) to scroll down to the most recent version history. 
