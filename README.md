@@ -10,7 +10,7 @@
 | Sprint | Description | Tools |
 | --- | --- | --- |
 | Week 1 | 1. Design a desktop weather application prototype <br/> 2. Flowchart the logic | `Figma`, `draw.io` | 
-| Week 2 | Develop the application based on prototype <br/> | `vanilla JavaScript`, `HTML`, `CSS` |
+| Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
 
 
 > [!NOTE]
