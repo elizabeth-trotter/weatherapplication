@@ -11,6 +11,7 @@
 | --- | --- | --- |
 | Week 1 | 1. Design a desktop weather application prototype <br/> 2. Flowchart the logic | `Figma`, `draw.io` | 
 | Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
+*(initial project timeline created pre-week 1)*
 
 
 > [!NOTE]
@@ -34,7 +35,7 @@ to visit the first prototype iteration.
 ## Flowchart
 
 ![Weather App Logo](./assets/flowchart/flowchart.png)
-*(initial flowchart logic created week 1)*
+*(initial flowchart logic created during week 1)*
 
 
 ---
