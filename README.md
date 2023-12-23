@@ -1,4 +1,4 @@
-# U.S. Weather Report ![Weather App Logo](./assets/flowchart/favicon.ico)
+# U.S. Weather Report ![Weather App Logo](./assets/flowchart/logo%20-%20Copy.png)
 
 **Name:** Elizabeth Trotter
 
