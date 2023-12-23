@@ -1,4 +1,4 @@
-# Weather Application ![Weather App Logo](./assets/flowchart/favicon.ico)
+# U.S. Weather Report ![Weather App Logo](./assets/flowchart/favicon.ico)
 
 **Name:** Elizabeth Trotter
 
@@ -14,7 +14,7 @@
 <p align="right">Table 1: Initial project timeline created pre-week 1</p>
 
 > [!NOTE]
-> Click [here](#development-version) to scroll down to view the **most recent version history**. 
+> Click [here](#development-version) to scroll down to view U.S. Weather Report's **version history**. 
 
 
 ---
