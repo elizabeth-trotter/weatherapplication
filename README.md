@@ -9,15 +9,15 @@
 
 | Sprint | Description | Tools |
 | --- | --- | --- |
-| Week 1 | 1. Design a desktop weather application prototype <br/> 2. Flowchart the logic | `Figma`, `draw.io` | 
-| Week 2 | Develop the application based on prototype | `vanilla JavaScript`, `HTML`, `CSS` |
-
+| Week 1 | 1. Design a desktop weather application using available data on OpenWeatherAPI <br/> 2. Flowchart the logic | `Figma`, `draw.io` | 
+| Week 2 | Develop the application based on the prototype designed | `vanilla JavaScript`, `HTML`, `CSS` |
+<p align="right">Table 1: Initial project timeline created pre-week 1</p>
 
 > [!NOTE]
-> Click [here](#development-version) to scroll down to the **most recent version history**. 
+> Click [here](#development-version) to scroll down to view the **most recent version history**. 
 
 
-
+---
 
 
 ## Website Preview
