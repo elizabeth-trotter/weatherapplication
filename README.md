@@ -17,13 +17,13 @@
 > Click [here](#development-version) to scroll down to the **most recent version history**. 
 
 
----
+
 
 
 ## Website Preview
 
 ![Website preview](./assets/preview.png)
-<p align="right">*Figure 1: Snapshot of staging website for development version V.2.4*</p>
+<p align="right">Figure 1: Snapshot of staging website for development version V.2.4</p>
 
 
 ## Prototype
@@ -40,7 +40,7 @@ to visit the first prototype iteration.
 ## Flowchart
 
 ![Weather App Logo](./assets/flowchart/flowchart.png)
-<p align="right">*Figure 2: Initial flowchart logic created during week 1 sprint*</p>
+<p align="right">Figure 2: Initial flowchart logic created during week 1 sprint</p>
 
 
 ---
