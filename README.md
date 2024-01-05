@@ -1,4 +1,4 @@
-# U.S. Weather Report ![Weather App Logo](./assets/flowchart/favicon.ico)
+# U.S. Weather Report ![Weather App Logo](./favicon.ico)
 
 **Name:** Elizabeth Trotter
 
@@ -32,7 +32,7 @@ Click [Prototype V 2](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather
 to visit the **final Figma prototype design**.
 - *Notable features expanded to include recent search history, todays hourly forecast, & updated favorite functionality.*
 
-Click [Prototype V 1](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&t=zIhP92ZA2ElktHf1-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design)
+Click [Prototype V 1](https://www.figma.com/proto/WiIYdG8WmdJ8nkJv6AB7AS/Business-Redesign?type=design&node-id=12-26&t=azX0UURJ9hhQjmls-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=12%3A26&mode=design)
 to visit the first prototype iteration.
 - *Notable features include five day forcast, current weather temp + condition, favorite storage, & search bar.*
 
