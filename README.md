@@ -1,4 +1,4 @@
-# U.S. Weather Report &nbsp;<a href="https://tangerine-gumdrop-821c6f.netlify.app/">![Website](https://img.shields.io/website?url=https%3A%2F%2Ftangerine-gumdrop-821c6f.netlify.app%2F&up_message=ONLINE&up_color=%23355E3B&down_message=OFFLINE&down_color=red&style=for-the-badge&logo=netlify)</a>
+# U.S. Weather Report &nbsp;&nbsp;<a href="https://tangerine-gumdrop-821c6f.netlify.app/">![Website](https://img.shields.io/website?url=https%3A%2F%2Ftangerine-gumdrop-821c6f.netlify.app%2F&up_message=ONLINE&up_color=%23355E3B&down_message=OFFLINE&down_color=red&style=for-the-badge&logo=netlify)</a>
 **Name:** Elizabeth Trotter
 
 > **Project Note:** This started off as a school assignment to design & develop our very own weather application by fetching data from `OpenWeatherAPI`. It was the `first major project` in which I was able to implement my newly acquired JavaScript knowledge. I have continued to `refactor the code`, improve the design, and add additional features since then. This was a `desktop first design`, and responsiveness for secondary screen sizes was added later.
