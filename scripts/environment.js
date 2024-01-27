@@ -1,3 +1,3 @@
 export { apiKey }
 
-const apiKey = process.env.API_KEY || 'default-api-key';
+const apiKey = window.API_KEY;
