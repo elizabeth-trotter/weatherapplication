@@ -131,7 +131,7 @@ navigator.geolocation.getCurrentPosition(success, errorFunc);
 async function success(position) {
 
     if (userSearch.value) {
-        const promise = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value},${stateCode},${countryCode}&limit=${limit}&appid=${apiKey}`);
+        const promise = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userSearch.value},${stateCode},${countryCode}&limit=${limit}&appid=${apiKey}`);
         const data = await promise.json();
         userLat = data[0].lat;
         userLon = data[0].lon;
@@ -181,7 +181,7 @@ async function currentWeatherAPI() {
 }
 
 async function reverseGeoAPI() {
-    const location = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${userLat}&lon=${userLon}&limit=5&appid=${apiKey}`)
+    const location = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${userLat}&lon=${userLon}&limit=5&appid=${apiKey}`)
     const data = await location.json();
     locationData = data;
 
@@ -437,7 +437,7 @@ userSearch.addEventListener('input', function () {
 
 // Fetch geocoding data from the API
 async function fetchGeocodingData(input) {
-    const promise_1 = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
+    const promise_1 = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${input},US&limit=5&appid=${apiKey}`);
     const data_1 = await promise_1.json();
     let lat_1, lon_1;
 
@@ -446,7 +446,7 @@ async function fetchGeocodingData(input) {
         lat_1 = data_1[i].lat;
         lon_1 = data_1[i].lon;
 
-        const promise_2 = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat_1}&lon=${lon_1}&limit=5&appid=${apiKey}`)
+        const promise_2 = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat_1}&lon=${lon_1}&limit=5&appid=${apiKey}`)
         const data_2 = await promise_2.json();
 
         if (data_2[0].name.toLowerCase().includes("county")) {
