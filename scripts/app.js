@@ -1,4 +1,4 @@
-import { apiKey } from "./env.js"
+import apiKey from "./env.js"
 
 // Define Variables
 let userSearch = document.getElementById("userSearch");
