@@ -27,7 +27,7 @@
 
 ## Prototype
 
-![Static Badge](https://img.shields.io/badge/prototype-V.2-blue?style=for-the-badge&logo=figma&logoColor=white)
+![Static Badge](https://img.shields.io/badge/prototype-V.2-blue?style=for-the-badge&logo=figma&logoColor=white&color=%23191970)
 
 Click [here](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design) 
 to visit the **final Figma prototype design**.
@@ -35,7 +35,7 @@ to visit the **final Figma prototype design**.
 &nbsp;
 
 
-![Static Badge](https://img.shields.io/badge/prototype-V.1-blue?style=for-the-badge&logo=figma&logoColor=white)
+![Static Badge](https://img.shields.io/badge/prototype-V.1-blue?style=for-the-badge&logo=figma&logoColor=white&color=%230047AB)
 
 Click [here](https://www.figma.com/proto/WiIYdG8WmdJ8nkJv6AB7AS/Business-Redesign?type=design&node-id=12-26&t=azX0UURJ9hhQjmls-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=12%3A26&mode=design)
 to visit the first prototype iteration.
