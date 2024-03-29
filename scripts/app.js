@@ -1,128 +1,15 @@
 import apiKey from "./env.js"
-
-// Define Variables
-let userSearch = document.getElementById("userSearch");
-let searchBtn = document.getElementById("searchBtn");
-
-let cityName = document.getElementById("cityName");
-let currentWeatherIcon = document.getElementById("currentWeatherIcon");
-let currentTemp = document.getElementById("currentTemp");
-let currentDesc = document.getElementById("currentDesc");
-let currentHigh = document.getElementById("currentHigh");
-let currentLow = document.getElementById("currentLow");
-
-// let time = document.getElementById("time");
-let morningIcon = document.getElementById("morningIcon");
-let morningTemp = document.getElementById("morningTemp");
-let afternoonIcon = document.getElementById("afternoonIcon");
-let afternoonTemp = document.getElementById("afternoonTemp");
-let nightTemp = document.getElementById("nightTemp");
-
-let dateDayOne = document.getElementById("dateDayOne");
-let dayOneIcon = document.getElementById("dayOneIcon");
-let dayOneHigh = document.getElementById("dayOneHigh");
-let dayOneLow = document.getElementById("dayOneLow");
-
-let dateDayTwo = document.getElementById("dateDayTwo");
-let dayTwoIcon = document.getElementById("dayTwoIcon");
-let dayTwoHigh = document.getElementById("dayTwoHigh");
-let dayTwoLow = document.getElementById("dayTwoLow");
-
-let dateDayThree = document.getElementById("dateDayThree");
-let dayThreeIcon = document.getElementById("dayThreeIcon");
-let dayThreeHigh = document.getElementById("dayThreeHigh");
-let dayThreeLow = document.getElementById("dayThreeLow");
-
-let dateDayFour = document.getElementById("dateDayFour");
-let dayFourIcon = document.getElementById("dayFourIcon");
-let dayFourHigh = document.getElementById("dayFourHigh");
-let dayFourLow = document.getElementById("dayFourLow");
-
-let dateDayFive = document.getElementById("dateDayFive");
-let dayFiveIcon = document.getElementById("dayFiveIcon");
-let dayFiveHigh = document.getElementById("dayFiveHigh");
-let dayFiveLow = document.getElementById("dayFiveLow");
-
-let favoritesAddBtn = document.getElementById("favoritesAddBtn");
-
-let tempUnit1 = document.getElementById("tempUnit1");
-let tempUnit2 = document.getElementById("tempUnit2");
-let tempUnit3 = document.getElementById("tempUnit3");
-let tempUnit4 = document.getElementById("tempUnit4");
+import { userSearch, searchBtn, cityName, currentWeatherIcon, currentTemp, currentDesc, currentHigh, currentLow, morningIcon, morningTemp, afternoonIcon, afternoonTemp, nightTemp, dateDayOne, dayOneIcon, dayOneHigh, dayOneLow, dateDayTwo, dayTwoIcon, dayTwoHigh, dayTwoLow, dateDayThree, dayThreeIcon, dayThreeHigh, dayThreeLow, dateDayFour, dayFourIcon, dayFourHigh, dayFourLow, dateDayFive, dayFiveIcon, dayFiveHigh, dayFiveLow, favoritesAddBtn, tempUnit1, tempUnit2, tempUnit3, tempUnit4 } from './variables.js';
+import { stateAb } from "./stateabr.js";
+import { setIcon } from "./setweathericon.js";
 
 // JavaScript Variables
 let userLat, userLon;
 let currentWeatherData, locationData, hourlyWeatherData;
-let todayUnix, todayDateTime, futureDate1, futureDate2, futureDate3, futureDate4, futureDate5;
-let stateCode = "";
-let countryCode = "US";
-let limit = 5;
-let units = "imperial";
-let favoritesArray = [];
-let recentsArray = [];
-
-let stateAb = {
-    'Alabama': 'AL',
-    'Alaska': 'AK',
-    'American Samoa': 'AS',
-    'Arizona': 'AZ',
-    'Arkansas': 'AR',
-    'Armed Forces Americas': 'AA',
-    'Armed Forces Europe': 'AE',
-    'Armed Forces Pacific': 'AP',
-    'California': 'CA',
-    'Colorado': 'CO',
-    'Connecticut': 'CT',
-    'Delaware': 'DE',
-    'District of Columbia': 'DC',
-    'Florida': 'FL',
-    'Georgia': 'GA',
-    'Guam': 'GU',
-    'Hawaii': 'HI',
-    'Idaho': 'ID',
-    'Illinois': 'IL',
-    'Indiana': 'IN',
-    'Iowa': 'IA',
-    'Kansas': 'KS',
-    'Kentucky': 'KY',
-    'Louisiana': 'LA',
-    'Maine': 'ME',
-    'Marshall Islands': 'MH',
-    'Maryland': 'MD',
-    'Massachusetts': 'MA',
-    'Michigan': 'MI',
-    'Minnesota': 'MN',
-    'Mississippi': 'MS',
-    'Missouri': 'MO',
-    'Montana': 'MT',
-    'Nebraska': 'NE',
-    'Nevada': 'NV',
-    'New Hampshire': 'NH',
-    'New Jersey': 'NJ',
-    'New Mexico': 'NM',
-    'New York': 'NY',
-    'North Carolina': 'NC',
-    'North Dakota': 'ND',
-    'Northern Mariana Islands': 'NP',
-    'Ohio': 'OH',
-    'Oklahoma': 'OK',
-    'Oregon': 'OR',
-    'Pennsylvania': 'PA',
-    'Puerto Rico': 'PR',
-    'Rhode Island': 'RI',
-    'South Carolina': 'SC',
-    'South Dakota': 'SD',
-    'Tennessee': 'TN',
-    'Texas': 'TX',
-    'United States Virgin Islands': 'VI',
-    'Utah': 'UT',
-    'Vermont': 'VT',
-    'Virginia': 'VA',
-    'Washington': 'WA',
-    'West Virginia': 'WV',
-    'Wisconsin': 'WI',
-    'Wyoming': 'WY'
-}
+let futureDates = [];
+// Query Params for API
+let stateCode = "", countryCode = "US", limit = 5, units = "imperial";
+let favoritesArray = [], recentsArray = [];
 
 //Geo location is a built in API that allows the user to share their location upon request
 navigator.geolocation.getCurrentPosition(success, errorFunc);
@@ -200,47 +87,8 @@ async function hourlyWeatherAPI() {
     hourlyWeatherData = data;
 }
 
-function setIcon(element, weather) {
-    switch (weather) {
-        case "Clear":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-sun");
-            break;
-        case "Clouds":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-cloud");
-            break;
-        case "Drizzle":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-cloud-rain");
-            break;
-        case "Rain":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-cloud-showers-heavy");
-            break;
-        case "Snow":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-snowflake");
-            break;
-        case "Thunderstorm":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-bolt-lightning");
-            break;
-        case "Tornado":
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-tornado");
-            break;
-        default:
-            element.className = "weatherIconFont";
-            element.classList.add("fa-solid", "fa-smog");
-            break;
-    }
-}
-
 function frequentCondition(arr) {
-    let count = 1,
-        max = 0,
-        el;
+    let count = 1, max = 0, el;
 
     for (let i = 1; i < arr.length; ++i) {
         if (arr[i] === arr[i - 1]) {
@@ -273,21 +121,17 @@ function updateDateTime() {
 setInterval(updateDateTime, 1000);
 
 function getDates() {
-    todayUnix = currentWeatherData.dt;
-    todayDateTime = new Date(todayUnix * 1000);
+    const todayUnix = currentWeatherData.dt;
+    const todayDateTime = new Date(todayUnix * 1000);
 
-    futureDate1 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
-    futureDate2 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
-    futureDate3 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
-    futureDate4 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
-    futureDate5 = new Date(todayDateTime.setHours(todayDateTime.getHours() + (24)));
+    for (let i = 1; i <= 5; i++) {
+        futureDates.push(new Date(todayDateTime.getTime() + (24 * 60 * 60 * 1000 * i)));
+    }
 
-    //Set Dates for Forecast
-    dateDayOne.innerHTML = futureDate1.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate1.toLocaleDateString('en-US', { month: "short", day: "numeric" });
-    dateDayTwo.innerHTML = futureDate2.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate2.toLocaleDateString('en-US', { month: "short", day: "numeric" });
-    dateDayThree.innerHTML = futureDate3.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate3.toLocaleDateString('en-US', { month: "short", day: "numeric" });
-    dateDayFour.innerHTML = futureDate4.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate4.toLocaleDateString('en-US', { month: "short", day: "numeric" });
-    dateDayFive.innerHTML = futureDate5.toLocaleDateString('en-US', { weekday: "long" }) + ", " + futureDate5.toLocaleDateString('en-US', { month: "short", day: "numeric" });
+    const dateElements = [dateDayOne, dateDayTwo, dateDayThree, dateDayFour, dateDayFive];
+    futureDates.forEach((date, index) => {
+        dateElements[index].innerHTML = date.toLocaleDateString('en-US', { weekday: "long", month: "short", day: "numeric" });
+    });
 }
 
 function hourlyForecast() {
@@ -300,7 +144,7 @@ function hourlyForecast() {
     for (let i = 0; i < hourlyWeatherData.list.length; i++) {
         let unixFutureTime = new Date(hourlyWeatherData.list[i].dt * 1000)
         //All Highs & Lows for Each Day
-        if (unixFutureTime.toLocaleDateString('default') === futureDate1.toLocaleDateString('default')) {
+        if (unixFutureTime.toLocaleDateString('default') === futureDates[0].toLocaleDateString('default')) {
             highDay1.push(hourlyWeatherData.list[i].main.temp_max)
             lowDay1.push(hourlyWeatherData.list[i].main.temp_min)
             weatherDay1.push(hourlyWeatherData.list[i].weather[0].main)
@@ -323,23 +167,23 @@ function hourlyForecast() {
                 nightCondition = hourlyWeatherData.list[i].weather[0].main;
             }
         }
-        else if (unixFutureTime.toLocaleDateString('default') === futureDate2.toLocaleDateString('default')) {
+        else if (unixFutureTime.toLocaleDateString('default') === futureDates[1].toLocaleDateString('default')) {
             highDay2.push(hourlyWeatherData.list[i].main.temp_max)
             lowDay2.push(hourlyWeatherData.list[i].main.temp_min)
             weatherDay2.push(hourlyWeatherData.list[i].weather[0].main)
         }
-        else if (unixFutureTime.toLocaleDateString('default') === futureDate3.toLocaleDateString('default')) {
+        else if (unixFutureTime.toLocaleDateString('default') === futureDates[2].toLocaleDateString('default')) {
             highDay3.push(hourlyWeatherData.list[i].main.temp_max)
             lowDay3.push(hourlyWeatherData.list[i].main.temp_min)
             weatherDay3.push(hourlyWeatherData.list[i].weather[0].main)
         }
-        else if (unixFutureTime.toLocaleDateString('default') === futureDate4.toLocaleDateString('default')) {
+        else if (unixFutureTime.toLocaleDateString('default') === futureDates[3].toLocaleDateString('default')) {
 
             highDay4.push(hourlyWeatherData.list[i].main.temp_max)
             lowDay4.push(hourlyWeatherData.list[i].main.temp_min)
             weatherDay4.push(hourlyWeatherData.list[i].weather[0].main)
         }
-        else if (unixFutureTime.toLocaleDateString('default') === futureDate5.toLocaleDateString('default')) {
+        else if (unixFutureTime.toLocaleDateString('default') === futureDates[4].toLocaleDateString('default')) {
             highDay5.push(hourlyWeatherData.list[i].main.temp_max)
             lowDay5.push(hourlyWeatherData.list[i].main.temp_min)
             weatherDay5.push(hourlyWeatherData.list[i].weather[0].main)
