@@ -1,7 +1,7 @@
-# U.S. Weather Report &nbsp;&nbsp;<a href="https://tangerine-gumdrop-821c6f.netlify.app/">![Website](https://img.shields.io/website?url=https%3A%2F%2Ftangerine-gumdrop-821c6f.netlify.app%2F&up_message=ONLINE&up_color=%23355E3B&down_message=OFFLINE&down_color=red&style=for-the-badge&logo=netlify)</a>
+# U.S. Weather Report &ensp;<a href="https://tangerine-gumdrop-821c6f.netlify.app/">![Website](https://img.shields.io/website?url=https%3A%2F%2Ftangerine-gumdrop-821c6f.netlify.app%2F&up_message=ONLINE&up_color=%23355E3B&down_message=OFFLINE&down_color=%238B0000&style=for-the-badge&logo=netlify)</a>
 **Name:** Elizabeth Trotter
 
-> **Project Note:** This started off as a school assignment to design & develop our very own weather application by fetching data from `OpenWeatherAPI`. It was the `first major project` in which I was able to implement my newly acquired JavaScript knowledge. I have continued to `refactor the code`, improve the design, and add additional features since then. This was a `desktop first design`, and responsiveness for secondary screen sizes was added later.
+> **Project Note:** The goal of this project was to design & develop a weather application by fetching data from `OpenWeatherAPI`. There were many challenges to overcome as it was the `first major project` in which I implemented my newly acquired JavaScript knowledge. I continued to `refactor the code`, improve the design, and add additional features since then. This was a `desktop first design`, and responsiveness for secondary screen sizes was added later.
 
 
 ## Timeline
@@ -27,7 +27,7 @@
 
 ## Prototype
 
-![Static Badge](https://img.shields.io/badge/prototype-V.2-blue?style=for-the-badge&logo=figma&logoColor=white)
+![Static Badge](https://img.shields.io/badge/prototype-V.2-blue?style=for-the-badge&logo=figma&logoColor=white&color=%23191970)
 
 Click [here](https://www.figma.com/proto/ZWrYFNi9Ei0d19MilmPCD7/Weather-App---Ver.-2?type=design&t=sql9SWjMqxd4uNh5-1&scaling=min-zoom&page-id=0%3A1&node-id=69-218&starting-point-node-id=69%3A218&show-proto-sidebar=1&mode=design) 
 to visit the **final Figma prototype design**.
@@ -35,9 +35,9 @@ to visit the **final Figma prototype design**.
 &nbsp;
 
 
-![Static Badge](https://img.shields.io/badge/prototype-V.1-blue?style=for-the-badge&logo=figma&logoColor=white)
+![Static Badge](https://img.shields.io/badge/prototype-V.1-blue?style=for-the-badge&logo=figma&logoColor=white&color=%230047AB)
 
-Click [here](https://www.figma.com/proto/WiIYdG8WmdJ8nkJv6AB7AS/Business-Redesign?type=design&node-id=12-26&t=azX0UURJ9hhQjmls-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=12%3A26&mode=design)
+Click [here](https://www.figma.com/proto/jL80hvy3MCaoqOMIm4Ocbz/Weather-App---Ver.-1?type=design&node-id=69-218&t=TfItkoFCmX59kFah-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=69%3A218&mode=design)
 to visit the first prototype iteration.
 - *Notable features include five day forcast, current weather temp + condition, favorite storage, & search bar.*
 
